@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    fetch("https://pokeapi.co/api/v2/item/?limit=6&offset=0")
+    fetch("https://pokeapi.co/api/v2/item/?limit=15&offset=0")
         .then(function(response){
             return response.json();
             
@@ -74,14 +74,14 @@ $(document).ready(function(){
                 
                 let itemHTML;
                 
-                    itemHTML = `<div class="card" style="width: 18rem;">
+                    itemHTML = `<div class="card" style="width: 8rem;">
                                       <img src="${itemDetails.sprites.default
 
                                       }" class="card-img-top" alt="...">
                                         <div class="card-body">
                                         <h5 class="card-title">${itemFirstLet + itemRest}</h5>
                                         <p class="card-text">${itemDetails.category.name}</p>                                        
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        <a href="item.html?id=${itemDetails.id}" class="btn btn-primary">Go somewhere</a>
                                          </div>
                                 </div>`;
                 
