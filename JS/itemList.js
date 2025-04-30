@@ -9,11 +9,11 @@ $(document).ready(function(){
         )
         .then(function(result){
             console.log(result);
-            let pokeList = result.results;
-           // pokeList.forEach(function(pokemon){
-                // Aquí lanzaríamos un fetch por cada pokemon.
-                //fetchPokemonData(pokemon)
-            //})
+            let itemList = result.results;
+            itemList.forEach(function(item){
+                    //Aqui lanzamos un fetch para cada item
+                    fetchItemData(item)
+            })
         })
         .catch(function(err){
 
@@ -22,36 +22,36 @@ $(document).ready(function(){
         });
         
         // array de pokemon aordenados
-        let sortedPokemon = [];
+        let sortedItems = [];
 
 
 
         // Funcion que pide a la api los datos de un pokemon y los ordena en un array
 
-        function fetchPokemonData(pokemon){
-            let urlPokemon = pokemon.url;
+        function fetchItemData(item){
+            let urlItem = item.url;
 
-            fetch(urlPokemon)
+            fetch(urlItem)
             .then(function(response){
                 return response.json();
                 
             })
-            .then(function(pokemonDetails){
+            .then(function(itemDetails){
                 
                 //Insertamos el primer pokemon y sus datos en el array sortedPokemon
 
-                sortedPokemon.push(pokemonDetails)
+                sortedItems.push(itemDetails)
 
-                sortedPokemon.sort(function(a,b){
+                sortedItems.sort(function(a,b){
                     return a.id - b.id; // ordenar por Id en orden ascendente
 
                     
                 })
-                renderPokemonCard();
+                renderItemCard();
 
             })
             .then(function(){
-                console.log(sortedPokemon);
+                console.log(sortedItems);
                 
             })
 
@@ -65,43 +65,29 @@ $(document).ready(function(){
         // Funcion para renderizar los datos de cada pokemon en un card
         // Esta función recorrerá el array sortedPokemon
 
-        function renderPokemonCard(){
-            $("#poke-cont").empty();
-            sortedPokemon.forEach(function(pokemonDetails){
-                let pokemonName = pokemonDetails.name
-                let pokemonFirstLet = pokemonName.slice(0,1).toUpperCase();
-                let pokemonRest = pokemonName.slice(1,pokemonName.length);
-                const types = pokemonDetails.types.map(typeInfo => typeInfo.type.name);
-                let pokeHTML;
-                if (types[1] === undefined){
-                    pokeHTML = `<div class="card type-${types[0]}" style="width: 18rem;">
-                                      <img src="${pokemonDetails.sprites.front_default
-
-                                      }" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                        <h5 class="card-title">${pokemonFirstLet + pokemonRest}</h5>
-                                        <p class="card-text">${pokemonDetails.id}</p>
-                                        <h5 class="card-title">${types[0]}</h5>
-                                         <a href="#" class="btn btn-primary">Go somewhere</a>
-                                         </div>
-                                </div>`;
-                }
-                else{
-                    pokeHTML = `<div class="card type-${types[0]} type-${types[1]}" style="width: 18rem;">
-                                      <img src="${pokemonDetails.sprites.front_default
-
-                                      }" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                        <h5 class="card-title">${pokemonFirstLet + pokemonRest}</h5>
-                                        <p class="card-text">${pokemonDetails.id}</p>
-                                        <h5 class="card-title">${types[0] + "/" + types[1]}</h5>
-                                         <a href="#" class="btn btn-primary">Go somewhere</a>
-                                         </div>
-                                </div>`;
-                }
+        function renderItemCard(){
+            $("#item-cont").empty();
+            sortedItems.forEach(function(itemDetails){
+                let itemName = itemDetails.name
+                let itemFirstLet = itemName.slice(0,1).toUpperCase();
+                let itemRest = itemName.slice(1,itemName.length);
                 
+                let itemHTML;
+                
+                    itemHTML = `<div class="card" style="width: 18rem;">
+                                      <img src="${itemDetails.sprites.default
 
-                $("#poke-cont").append(pokeHTML);
+                                      }" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                        <h5 class="card-title">${itemFirstLet + itemRest}</h5>
+                                        <p class="card-text">${itemDetails.category.name}</p>                                        
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                         </div>
+                                </div>`;
+                
+               
+
+                $("#item-cont").append(itemHTML);
 
             })
 
