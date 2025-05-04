@@ -9,6 +9,9 @@
 body.bg-white {
     background-color: var(--silver) !important;
     display: block;
+    width: 100vw !important;
+    height: 100vh;
+    overflow-x: hidden;
 }
 
 body div.DS-console {
@@ -32,6 +35,6 @@ body span.DS-effect {
     display: block;
 }
 
-body col {
-    background-color: blue;
+body div div.page-side {
+    background-color: var(--silver);
 }
