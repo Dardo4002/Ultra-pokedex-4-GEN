@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    fetch("https://pokeapi.co/api/v2/item/?limit=15&offset=0")
+    fetch("https://pokeapi.co/api/v2/item/?limit=3&offset=0")
         .then(function(response){
             return response.json();
             
@@ -74,14 +74,13 @@ $(document).ready(function(){
                 
                 let itemHTML;
                 
-                    itemHTML = `<div class="card" style="width: 8rem;">
-                                      <img src="${itemDetails.sprites.default
 
-                                      }" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                        <h5 class="card-title">${itemFirstLet + itemRest}</h5>
-                                        <p class="card-text">${itemDetails.category.name}</p>                                        
-                                        <a href="item.html?id=${itemDetails.id}" class="btn btn-primary">Go somewhere</a>
+                    itemHTML = `<div>
+                                      <img src="${itemDetails.sprites.default}" alt="...">
+                                        <div>
+                                        <h5>${itemFirstLet + itemRest}</h5>
+                                        <p>${itemDetails.category.name}</p>                                        
+                                        <button class="select-btn">Select</button>
                                          </div>
                                 </div>`;
                 
@@ -90,7 +89,19 @@ $(document).ready(function(){
                 $("#item-cont").append(itemHTML);
 
             })
+            $(".select-btn").on("click", function() {
+                select();
+            });
 
+        }
+        
+        function select(){
+            $("#selected").empty();
+            let itemInfo = `<div> <img src=""> <div>
+            <h5>ive been selected</h5>
+            </div></div>`;
 
+            $("#selected").append(itemInfo);
+            
         }
 })

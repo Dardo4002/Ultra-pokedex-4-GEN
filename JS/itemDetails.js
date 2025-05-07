@@ -13,6 +13,7 @@ $(document).ready(function(){
     .then(function(result){
         console.log(result);
         
+        itemInfo(result);
     })
     .catch(function(err){
 
@@ -32,16 +33,7 @@ function fetchItemData(item){
     })
     .then(function(itemDetails){
         
-        //Insertamos el primer pokemon y sus datos en el array sortedPokemon
-
-        sortedItems.push(itemDetails)
-
-        sortedItems.sort(function(a,b){
-            return a.id - b.id; // ordenar por Id en orden ascendente
-
-            
-        })
-        renderItemCard();
+        
 
     })
     .then(function(){
@@ -55,3 +47,23 @@ function fetchItemData(item){
     })
 
 }
+
+function itemInfo(result){
+    $("#item-cont").empty();
+
+    let itemDetailsHTML = `<div>
+                                      <img src="${result.sprites.default
+
+                                      }" alt="...">
+                                        <div>
+                                        <h5>${result.name}</h5>
+                                        <p>${result.category.name}</p>                                        
+                                        <button onclick="select()">HEllo</button>
+
+                                         </div>
+                                </div>`;
+
+    $("#item-cont").append(itemDetailsHTML);
+                                
+}
+
