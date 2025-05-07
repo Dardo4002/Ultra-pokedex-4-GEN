@@ -1,3 +1,4 @@
+/* Variables */
 :root {
     --red: rgb(209, 60, 60);
     --silver: rgb(236, 236, 236);
@@ -6,6 +7,8 @@
     --screen-hue: #83A867;
 }
 
+
+/* Contenedor de pantallas */
 body.bg-white {
     background-color: var(--silver) !important;
     display: block;
@@ -14,20 +17,19 @@ body.bg-white {
     overflow-x: hidden;
 }
 
+
+/* Bandas laterales externas */
+body div div.page-side {
+    background-color: var(--silver);
+}
+
+/* DS */
 body div.DS-console {
-    background-color: var(--red);
+    background-color: var(--silver);
+    margin: 0;
 }
 
-body section.top-screen {
-    background-color: var(--screen-hue);
-    border: 8px solid var(--outline);
-}
-
-body section.bottom-screen {
-    background-color: var(--screen-hue);
-    border: 8px solid var(--outline);
-}
-
+/* Decoración*/
 body span.DS-effect {
     background-color: aqua;
     width: 100px;
@@ -35,6 +37,10 @@ body span.DS-effect {
     display: block;
 }
 
-body div div.page-side {
-    background-color: var(--silver);
+
+/* Pantallas */
+body section.screen {
+    background-color: var(--screen-hue);
+    border: 8px solid var(--outline);
 }
+

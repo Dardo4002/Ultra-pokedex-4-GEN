@@ -14,28 +14,50 @@
     <!-- Nuestro CSS -->
      <link rel="stylesheet" href="CSS/styles.css">
 </head>
-<body class="bg-white container-fluid vh-100 d-flex flex-column"> 
-    <div class="row flex-fill text-center">
-        <div class="col col-lg-1 col-sm-0 page-side"></div>
-        <div class="col col-lg-12 col-sm-6 DS-console row d-flex flex-column">
-            <span class="DS-effect position-absolute top-50 start-0 translate-middle z-1 col-0"></span>
-            <span class="DS-effect position-absolute top-50 start-100 translate-middle z-1 col-0"></span>
-            <section class="col top-screen z-2 justify-content-center align-items">
-                    <!-- <div id="poke-cont" class="row justify-content-center">
-                        <div class="spinner-border text-primary" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                    </div> -->Top Screen
-            </section>
-            <section class="col bottom-screen z-2 justify-content-center align-items">
-                <!-- <div id="poke-cont" class="row justify-content-center">
-                    <div class="spinner-border text-primary" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                    </div>
-                </div> -->Bottom Screen
-        </section>
+<body class="vh-100">
+     
+    <!--Contenedor de pantallas  -->
+    <div class="bg-white container-fluid vh-100">
+        <div class="row flex-fill d-flex vh-100">
+            <!-- Banda lateral 1 -->
+                <div class="page-side col-1 "></div>
+
+                <!-- DS -->
+                <div class="DS-console col-10 row gy-5">
+
+                    <!-- Pantalla 1 -->
+                    <section class="screen col-12">
+                            <!-- <div id="poke-cont" class="row justify-content-center">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </div> -->Top Screen
+                    </section>
+
+                    <!-- Pantalla 2 -->
+                    <section class="screen col-12">
+                        <!-- <div id="poke-cont" class="row justify-content-center">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div> -->Bottom Screen
+                    </section>
+
+                </div>
+            <!-- Decoración de los laterales
+            <span class="DS-effect"></span>
+            Deco 1
+        <span class="DS-effect"></span> -->
+
+        <!-- Banda lateral 2 -->
+        <div class="page-side col-1"></div>
+        </div> 
+            
         </div>
-        <div class="col col-lg-1 col-sm-0 page-side"></div>
+
+        
+
+        
     </div>       
     <!-- Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
