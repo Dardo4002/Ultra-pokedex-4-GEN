@@ -22,3 +22,36 @@ $(document).ready(function(){
     
 })
 
+function fetchItemData(item){
+    let urlItem = item.url;
+
+    fetch(urlItem)
+    .then(function(response){
+        return response.json();
+        
+    })
+    .then(function(itemDetails){
+        
+        //Insertamos el primer pokemon y sus datos en el array sortedPokemon
+
+        sortedItems.push(itemDetails)
+
+        sortedItems.sort(function(a,b){
+            return a.id - b.id; // ordenar por Id en orden ascendente
+
+            
+        })
+        renderItemCard();
+
+    })
+    .then(function(){
+        console.log(sortedItems);
+        
+    })
+
+    .catch(function(err){
+        console.log(err);
+        
+    })
+
+}
