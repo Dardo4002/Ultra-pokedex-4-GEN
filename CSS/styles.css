@@ -17,16 +17,34 @@ body.bg-white {
     overflow-x: hidden;
 }
 
-
 /* Bandas laterales externas */
-body div div.page-side {
+.page-external{
+    width: 1000px;
+}
+
+/* Decoraciones internas */
+.page-side {
+    background-color: var(--red);
+    height: 10vh;
+}
+
+/* Decoraciones orizontales de dentro (aun no funciona bien)*/
+.page-internal{
     background-color: var(--silver);
+    height: 5vh;
+}
+
+/* Contenedor de pantallas y decoraciones */
+.screen-container{
+    margin: 0px;
+    padding: 0px;
 }
 
 /* DS */
-body div.DS-console {
+.DS-console {
     background-color: var(--silver);
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 /* Decoración*/
@@ -42,5 +60,6 @@ body span.DS-effect {
 body section.screen {
     background-color: var(--screen-hue);
     border: 8px solid var(--outline);
+    height: 30vh;
 }
 
