@@ -3,6 +3,7 @@
     --red: rgb(209, 60, 60);
     /* Cambiar el de abajo a uno mejor */
     --dark-red: rgb(94, 21, 21);
+
     --silver: rgb(236, 236, 236);
     --coal: rgb(65, 65, 65);
     --outline: rgb(10, 10, 10);
@@ -35,18 +36,26 @@ body.bg-white {
 .page-side {
     background-color: var(--red);
     height: 100%;
+
+    margin: 0px;
+    gap: 0px;
+    padding: 0px;
 }
 
 .page-top-down{
     background-color: var(--silver);
-    height: 5vh; 
+    height: 5vh;
+    
+    margin: 0px;
+    gap: 0px;
+    padding: 0px;
 }
 
 /* Decoraciones orizontales de dentro*/
 .page-internal{
     background-color: var(--silver);
     height: 5vh;
-    width: 100vw;
+    width: 100%;
 }
 
 /* Contenedor de pantallas y decoraciones */
@@ -57,7 +66,7 @@ body.bg-white {
 
 /* DS */
 .DS-console {
-    background-color: var(--silver);
+    background-color: var(--red);
     height: 42.5vh;
     margin: 0px;
     padding: 0px;
@@ -72,10 +81,37 @@ body span.DS-effect {
 }
 
 
+/* PANTALLA ABAJO DECORACION IZQUIERDA */
+
+/* Parte arriba y abajo cruceta */
+.up-down-cross{
+    background-color: var(--red);
+    height: 3vh;
+}
+
+/* zona cruceta */
+.gray-left{
+    background-color: var(--coal);
+    height: 37vh;
+    width: 110%;
+}
+
+
+/* PANTALLA ABAJO DECORACION DERECHA */
+.heigth{
+    height: 10vh;
+}
+
+.gray-rigth{
+    background-color: var(--coal);
+    height: 37vh;
+    margin-top: 3vh;
+}
+
 /* Pantallas */
 body section.screen {
     background-color: var(--screen-hue);
-    border: 8px solid var(--outline);
+    border: 10px solid var(--outline);
     height: 100%;
 }
 
