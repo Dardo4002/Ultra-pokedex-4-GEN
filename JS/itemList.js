@@ -21,12 +21,12 @@ $(document).ready(function(){
             
         });
         
-        // array de pokemon aordenados
+        // array de items aordenados
         let sortedItems = [];
 
 
 
-        // Funcion que pide a la api los datos de un pokemon y los ordena en un array
+        // Funcion que pide a la api los datos de un item y los ordena en un array
 
         function fetchItemData(item){
             let urlItem = item.url;
@@ -38,7 +38,7 @@ $(document).ready(function(){
             })
             .then(function(itemDetails){
                 
-                //Insertamos el primer pokemon y sus datos en el array sortedPokemon
+                //Insertamos el primer item y sus datos en el array sortedItems
 
                 sortedItems.push(itemDetails)
 
@@ -62,8 +62,8 @@ $(document).ready(function(){
 
         }
 
-        // Funcion para renderizar los datos de cada pokemon en un card
-        // Esta función recorrerá el array sortedPokemon
+        // Funcion para renderizar los datos de cada item en un card
+        // Esta función recorrerá el array sortedItem
 
         function renderItemCard(){
             $("#item-cont").empty();
