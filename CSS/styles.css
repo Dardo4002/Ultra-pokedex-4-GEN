@@ -113,7 +113,6 @@ body section.screen {
     background-color: var(--screen-hue);
     border: 10px solid var(--outline);
     height: 100%;
-    
 }
 
 /* Común pantalla de abajo */
@@ -137,12 +136,39 @@ body section.screen {
 .filters{
     width: 80%;
     height: 6vh;
+}
+
+/* Contenedor tarjetitas */
+.card-cont {
+    scrollbar-gutter: stable;
+    box-sizing: border-box;
     
+    max-height: 350px;
+    overflow-y: auto; /* por si acaso */
+}
+
+/* Personalización barra de scroll */
+.card-cont::-webkit-scrollbar {
+    width: 8px; /* ancho de la barra */
+}
+
+.card-cont::-webkit-scrollbar-track {
+    background: #83A867;
+    border-radius: 10px;
+}
+
+.card-cont::-webkit-scrollbar-thumb {
+    background: #2b2b2b;
+    border-radius: 10px;
+}
+
+.card-cont::-webkit-scrollbar-thumb:hover {
+    background: #1f1f1f;
 }
 
 /* Tarjetitas pantalla de abajo */
-.card{
+.card {
     width: 100%;
-    height: 2vh;
+    height: 4vh;
     background-color: white;
 }
