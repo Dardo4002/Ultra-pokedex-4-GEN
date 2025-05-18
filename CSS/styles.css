@@ -3,7 +3,7 @@
     --red: rgb(209, 60, 60);
     /* Cambiar el de abajo a uno mejor */
     --dark-red: rgb(94, 21, 21);
-
+    --blue: rgb(131, 195, 231);
     --silver: rgb(236, 236, 236);
     --coal: rgb(65, 65, 65);
     --outline: rgb(10, 10, 10);
@@ -113,5 +113,36 @@ body section.screen {
     background-color: var(--screen-hue);
     border: 10px solid var(--outline);
     height: 100%;
+    
 }
 
+/* Común pantalla de abajo */
+.pantalla-abajo{
+    background-color: var(--blue);
+}
+
+/* Carrousel pantalla de abajo */
+.carrousel{
+    width: 90%;
+    height: 6vh;
+}
+
+/* Foto de abajo */
+.picture{
+    width: 12vh;
+    height: 12vh;
+}
+
+/* Botones para los filtros */
+.filters{
+    width: 80%;
+    height: 6vh;
+    
+}
+
+/* Tarjetitas pantalla de abajo */
+.card{
+    width: 100%;
+    height: 2vh;
+    background-color: white;
+}
