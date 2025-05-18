@@ -40,7 +40,34 @@
 
                     <!-- Pantalla 1 -->
                     <section class="screen col-6 rounded-4">
-                            
+                        <!-- Mitad de arriba -->
+                        <div class="col-12">
+                            <div class="row align-items-center">
+                                <!-- Imagen a la izquierda, ocupa el 50% -->
+                                <div class="col-6">
+                                    <img class="picture mt-4 ms-4" src="Media/Img/Bag_Ultra_Ball_Sprite.webp" alt="Imagen">
+                                </div>
+
+                                <!-- Contenido textual a la derecha -->
+                                <div class="col-6 d-flex flex-column justify-content-center part-right-cont">
+                                    <!-- Nombre ocupa la mitad derecha (50% de col-6 = col-12 dentro del contenedor) -->
+                                    <div class="w-100 h-50 text-center mb-2 pantalla-arriba mt-5 rounded-4 borde">
+                                        <p>NOMBRE</p>
+                                    </div>
+
+                                    <!-- Tipo y Precio juntos en fila -->
+                                    <div class="d-flex align-items-center justify-content-between gap-3 h-50 mt-2">
+                                        <div class="w-50 h-100 text-center pantalla-arriba rounded-4 borde">OBJ TIPE</div>
+                                        <div class="w-50 h-100 text-center pantalla-arriba rounded-4 borde">PRECIO</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mitad de abajo -->
+                        <div class="col-12">
+                            <p>DESCRIPCIÓN DEL ITEM</p>
+                        </div>
                     </section>
 
                     <!-- Decoraciones laterales 2 -->
@@ -71,19 +98,22 @@
                     
                     <!-- Pantalla 2 -->
                     <section class="screen col-6 rounded-4 row">
-                        <div class="col-6 h-100 d-flex flex-column align-items-center gap-5">
+                        <!-- Botones de la izquierda, aún no funcionan -->
+                        <div class="col-6 h-100 d-flex flex-column align-items-center gap-4">
 
                             <div class="row carrousel pantalla-abajo rounded-3 mt-4">
 
                             </div>
                             
+                            <!-- Imagen de la bolsa, con JS hacer que cambie su imagen a otra en función de cual fintro esté activado -->
                             <img class="picture pantalla-abajo rounded-3" src="Media/Img/Pt_Items_pocket_M.png" alt="">
                             
                             <div class="row filters pantalla-abajo rounded-3">
 
                             </div>
                         </div>
-                        <div class=" card-cont col-6 h-100 overflow-auto">
+                        <div class=" card-cont col-6 h-100 overflow-auto mt-3">
+                            <!-- Todas las tarjetitas, se meten cosas con código de JS-->
                             <div class="row card mt-2 rounded-5">
                                 <p class="ml-2 mt-1">NOMBRE DEL ITEM</p>
                             </div>

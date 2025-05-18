@@ -72,12 +72,30 @@ body.bg-white {
     padding: 0px;
 }
 
+
+
+/* PANTALLA DE ARRIBA */
+
+.pantalla-arriba{
+    background-color: white;
+}
+
+.part-right-cont{
+    height: 20vh;
+}
+
+
 /* Decoración*/
 body span.DS-effect {
     background-color: aqua;
     width: 100px;
     height: 60vh;
     display: block;
+}
+
+/* Borde */
+.borde{
+    border: 5px solid var(--outline);
 }
 
 
@@ -128,8 +146,8 @@ body section.screen {
 
 /* Foto de abajo */
 .picture{
-    width: 12vh;
-    height: 12vh;
+    width: 15vh;
+    height: 15vh;
 }
 
 /* Botones para los filtros */
@@ -143,7 +161,7 @@ body section.screen {
     scrollbar-gutter: stable;
     box-sizing: border-box;
     
-    max-height: 350px;
+    max-height: 35vh;
     overflow-y: auto; /* por si acaso */
 }
 
@@ -172,3 +190,12 @@ body section.screen {
     height: 4vh;
     background-color: white;
 }
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
