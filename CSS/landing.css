@@ -79,4 +79,23 @@ body {
     border-radius: 2px;
   }
   
+  .custom-underline {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .custom-underline {
+    width: 70%; /* en pantallas chicas la línea es más ancha */
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-underline {
+    width: 90%; /* en móviles, casi el ancho completo */
+  }
+}
+
 
