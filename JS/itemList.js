@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    fetch("https://pokeapi.co/api/v2/item/?limit=3&offset=0")
+    fetch("https://pokeapi.co/api/v2/item/?limit=15&offset=0")
         .then(function(response){
             return response.json();
             
@@ -21,12 +21,12 @@ $(document).ready(function(){
             
         });
         
-        // array de pokemon aordenados
+        // array de items ordenados
         let sortedItems = [];
 
 
 
-        // Funcion que pide a la api los datos de un pokemon y los ordena en un array
+        // Funcion que pide a la api los datos de un item y los ordena en el array
 
         function fetchItemData(item){
             let urlItem = item.url;
@@ -38,7 +38,7 @@ $(document).ready(function(){
             })
             .then(function(itemDetails){
                 
-                //Insertamos el primer pokemon y sus datos en el array sortedPokemon
+                //Insertamos el primer item y sus datos en el array sortedItems
 
                 sortedItems.push(itemDetails)
 
@@ -62,11 +62,11 @@ $(document).ready(function(){
 
         }
 
-        // Funcion para renderizar los datos de cada pokemon en un card
-        // Esta función recorrerá el array sortedPokemon
+        // Funcion para renderizar los datos de cada item
+        // Esta función recorrerá el array sortedItems
 
         function renderItemCard(){
-            $("#item-cont").empty();
+            $(".item-cont").empty();
             sortedItems.forEach(function(itemDetails){
                 let itemName = itemDetails.name
                 let itemFirstLet = itemName.slice(0,1).toUpperCase();
@@ -75,18 +75,14 @@ $(document).ready(function(){
                 let itemHTML;
                 
 
-                    itemHTML = `<div>
-                                      <img src="${itemDetails.sprites.default}" alt="...">
-                                        <div>
-                                        <h5>${itemFirstLet + itemRest}</h5>
-                                        <p>${itemDetails.category.name}</p>                                        
-                                        <button class="select-btn">Select</button>
-                                         </div>
-                                </div>`;
+                    itemHTML = `<div class="row card mt-2 rounded-5">
+                                <p class="ml-2 mt-1">${itemFirstLet + itemRest}</p>
+                            </div>`;
+                                
                 
                
 
-                $("#item-cont").append(itemHTML);
+                $(".item-cont").append(itemHTML);
 
             })
             $(".select-btn").on("click", function() {
