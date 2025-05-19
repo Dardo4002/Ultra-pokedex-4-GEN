@@ -76,7 +76,7 @@ $(document).ready(function(){
                 
 
                     itemHTML = `<div class="row card mt-2 rounded-5">
-                                <p class="ml-2 mt-1">${itemFirstLet + itemRest}</p>
+                                <p id="${itemDetails.id}" class="ml-2 mt-1 select-btn">${itemFirstLet + itemRest}</p>
                             </div>`;
                                 
                 
@@ -86,18 +86,70 @@ $(document).ready(function(){
 
             })
             $(".select-btn").on("click", function() {
-                select();
+                
+                let itemId = $(this).attr("id");
+                console.log(itemId);
+                select(itemId);
             });
 
         }
         
-        function select(){
+        function select(itemId){
+            
+            fetch("https://pokeapi.co/api/v2/item/" + itemId)
+        .then(function(response){
+            return response.json();
+            
+        }
+            
+        )
+        .then(function(result){
+            console.log(result);
+            let selectedItem = result;
             $("#selected").empty();
-            let itemInfo = `<div> <img src=""> <div>
-            <h5>ive been selected</h5>
-            </div></div>`;
+            let itemInfo = `<div class="col-12">
+                            <div class="row align-items-center">
+                                <!-- Imagen a la izquierda, ocupa el 50% -->
+                                <div class="col-6">
+                                    <img class="picture mt-4 ms-4" src="${selectedItem.sprites.default}" alt="Imagen">
+                                </div>
+
+                                <!-- Contenido textual a la derecha -->
+                                <div class="col-6 d-flex flex-column justify-content-center part-right-cont">
+                                    <!-- Nombre ocupa la mitad derecha (50% de col-6 = col-12 dentro del contenedor) -->
+                                    <div class="w-100 h-50 d-flex justify-content-center align-items-center text-center mb-2 pantalla-arriba mt-5 rounded-4 borde">
+                                        <p class="mb-0">Name: <br> ${selectedItem.name}</p>
+                                    </div>
+
+                                    <!-- Tipo y Precio juntos en fila -->
+                                    <div class="d-flex align-items-center justify-content-between gap-3 h-50 mt-2">
+                                        <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
+                                         <p class="mb-0">Category: <br> ${selectedItem.category.name}</p>       
+                                        </div>
+                                        <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
+                                            <p class="mb-0">Price: <br> ${selectedItem.cost} Pokecoins</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mitad de abajo -->
+                        <div class="col-12 part-down-cont mt-3 rounded-4 d-flex justify-content-center align-items-center borde">
+                            <p class="mb-0 text-center">${selectedItem.effect_entries[0].effect}</p>
+                        </div>`;
 
             $("#selected").append(itemInfo);
+        })
+        .catch(function(err){
+
+            console.log(err);
+            
+        });
+
+
+            
             
         }
 })
