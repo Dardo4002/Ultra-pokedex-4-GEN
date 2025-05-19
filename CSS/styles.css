@@ -3,6 +3,7 @@
     --red: rgb(209, 60, 60);
     /* Cambiar el de abajo a uno mejor */
     --dark-red: rgb(94, 21, 21);
+    --blue: rgb(131, 195, 231);
     --silver: rgb(236, 236, 236);
     --coal: rgb(65, 65, 65);
     --outline: rgb(10, 10, 10);
@@ -35,18 +36,26 @@ body.bg-white {
 .page-side {
     background-color: var(--red);
     height: 100%;
+
+    margin: 0px;
+    gap: 0px;
+    padding: 0px;
 }
 
 .page-top-down{
     background-color: var(--silver);
-    height: 5vh; 
+    height: 5vh;
+    
+    margin: 0px;
+    gap: 0px;
+    padding: 0px;
 }
 
 /* Decoraciones orizontales de dentro*/
 .page-internal{
     background-color: var(--silver);
     height: 5vh;
-    width: 100vw;
+    width: 100%;
 }
 
 /* Contenedor de pantallas y decoraciones */
@@ -57,10 +66,27 @@ body.bg-white {
 
 /* DS */
 .DS-console {
-    background-color: var(--silver);
+    background-color: var(--red);
     height: 42.5vh;
     margin: 0px;
     padding: 0px;
+}
+
+
+
+/* PANTALLA DE ARRIBA */
+
+.pantalla-arriba{
+    background-color: white;
+}
+
+.part-right-cont{
+    height: 20vh;
+}
+
+.part-down-cont{
+    height: 17vh;
+    background-color: white;
 }
 
 /* Decoración*/
@@ -71,11 +97,109 @@ body span.DS-effect {
     display: block;
 }
 
+/* Borde */
+.borde{
+    border: 5px solid var(--outline);
+}
+
+
+/* PANTALLA ABAJO DECORACION IZQUIERDA */
+
+/* Parte arriba y abajo cruceta */
+.up-down-cross{
+    background-color: var(--red);
+    height: 3vh;
+}
+
+/* zona cruceta */
+.gray-left{
+    background-color: var(--coal);
+    height: 37vh;
+    width: 110%;
+}
+
+
+/* PANTALLA ABAJO DECORACION DERECHA */
+.heigth{
+    height: 10vh;
+}
+
+.gray-rigth{
+    background-color: var(--coal);
+    height: 37vh;
+    margin-top: 3vh;
+}
 
 /* Pantallas */
 body section.screen {
     background-color: var(--screen-hue);
-    border: 8px solid var(--outline);
+    border: 10px solid var(--outline);
     height: 100%;
 }
 
+/* Común pantalla de abajo */
+.pantalla-abajo{
+    background-color: var(--blue);
+}
+
+/* Carrousel pantalla de abajo */
+.carrousel{
+    width: 90%;
+    height: 6vh;
+}
+
+/* Foto de abajo */
+.picture{
+    width: 15vh;
+    height: 15vh;
+}
+
+/* Botones para los filtros */
+.filters{
+    width: 80%;
+    height: 6vh;
+}
+
+/* Contenedor tarjetitas */
+.card-cont {
+    scrollbar-gutter: stable;
+    box-sizing: border-box;
+    
+    max-height: 35vh;
+    overflow-y: auto; /* por si acaso */
+}
+
+/* Personalización barra de scroll */
+.card-cont::-webkit-scrollbar {
+    width: 8px; /* ancho de la barra */
+}
+
+.card-cont::-webkit-scrollbar-track {
+    background: #83A867;
+    border-radius: 10px;
+}
+
+.card-cont::-webkit-scrollbar-thumb {
+    background: #2b2b2b;
+    border-radius: 10px;
+}
+
+.card-cont::-webkit-scrollbar-thumb:hover {
+    background: #1f1f1f;
+}
+
+/* Tarjetitas pantalla de abajo */
+.card {
+    width: 100%;
+    height: 4vh;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
