@@ -210,7 +210,45 @@ body span.DS-effect {
 .btn-y { top: 32.5px; left: 0; }       /* Left (Y) */
 .btn-a { top: 32.5px; right: 0; }      /* Right (A) */
 .btn-b { bottom: 0; left: 32.5px; }    /* Bottom (B) */
+.buttons-ds {
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
 
+.btn-ds {
+    width: 30px;
+    height: 30px;
+    background-color: #777;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* Positioning like DS layout */
+.btn-a {
+    top: 25px;
+    right: 0;
+}
+
+.btn-b {
+    bottom: 0;
+    left: 25px;
+}
+
+.btn-x {
+    top: 0;
+    left: 25px;
+}
+
+.btn-y {
+    top: 25px;
+    left: 0;
+}
 
 /* PANTALLA ABAJO DECORACION DERECHA */
 .heigth{
