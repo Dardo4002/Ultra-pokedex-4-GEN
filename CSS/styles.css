@@ -14,6 +14,22 @@
     margin: 0px;
     padding: 0px;
     gap: 0px;
+    font-family: "Jersey 20", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* TEXTO */
+.text-wrap{
+  font-size: clamp(0.5rem, 2vw, 1.2rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* color de fondo del todo */
+.total-background{
+    background-color: var(--dark-red);
 }
 
 /* Contenedor de pantallas */
@@ -208,10 +224,10 @@ body span.DS-effect {
 }
 
 /* Positioning buttons in diamond layout */
-.btn-x { top: 0; left: 32.5px; }       /* Top (X) */
-.btn-y { top: 32.5px; left: 0; }       /* Left (Y) */
-.btn-a { top: 32.5px; right: 0; }      /* Right (A) */
-.btn-b { bottom: 0; left: 32.5px; }    /* Bottom (B) */
+.btn-x { top: -300%; left: 80%; }       /* Top (X) */
+.btn-y { top: -250%; left: 30%; }       /* Left (Y) */
+.btn-a { top: -250%; left: 130%; }      /* Right (A) */
+.btn-b { top: -200%; left: 80%; }    /* Bottom (B) */
 
 
 /* PANTALLA ABAJO DECORACION DERECHA */
@@ -277,7 +293,7 @@ body section.screen {
     scrollbar-gutter: stable;
     box-sizing: border-box;
     
-    max-height: 38vh;
+    max-height: 90%;
     overflow-y: auto; /* por si acaso */
 }
 
@@ -327,3 +343,36 @@ body section.screen {
 }
 
 /* MEDIA QUERIES */
+
+
+/* 📱 Teléfonos pequeños (pantallas menores a 576px) */
+@media (max-width: 1000px) {
+  .non-display{
+    display: none !important;
+    }
+    .more-width{
+        width: 50%;
+    }
+    .smaller{
+        width: 12vh;
+        height: 12vh;
+    }
+    .text{
+    font-size: calc(1vw + 0.5rem);
+    text-overflow: ellipsis;
+}
+}
+
+/* 📱 Teléfonos medianos a tablets pequeñas (576px a 767.98px) */
+@media (max-width: 770px) {
+  .non-display-extra{
+    display: none;
+    }
+    .more-width-extra{
+        width: 100%;
+        margin: 0px;
+    }
+    .less-height{
+        height: 2%;
+    }
+}
