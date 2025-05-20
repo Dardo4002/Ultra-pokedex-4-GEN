@@ -148,6 +148,23 @@ body section.screen {
     height: 6vh;
 }
 
+.carrousel .sort {
+    height: 100%;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.carrousel .sort:not(.slct):hover {
+    background-color: gray;
+}
+
+.carrousel .sort.slct {
+    background-color: rgb(66, 255, 75);
+}
+
 /* Foto de abajo */
 .picture{
     width: 15vh;
@@ -195,14 +212,22 @@ body section.screen {
     background-color: white;
 }
 
-
-.slct{
-    background-color: gray;
-
-}
-.help :hover{
-    background-color: gray;
+.item-sprite {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
+.help {
+    cursor: pointer;
+}
+
+.help:not(.slct):hover {
+    background-color: gray;
+}
+
+.slct {
+    background-color: rgb(66, 255, 75);
+}
 
 /* MEDIA QUERIES */
