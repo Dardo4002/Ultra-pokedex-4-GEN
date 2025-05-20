@@ -63,7 +63,7 @@ $(document).ready(function(){
                                 <img src="${itemDetails.sprites.default}" alt="${itemName}" class="item-sprite">
                             </div>
                             <div class="col-9 d-flex justify-content-center align-items-center">
-                                <p id="${itemDetails.id}" class="button mb-0">${itemFirstLet + itemRest}</p>
+                                <p id="${itemDetails.id}" class="button text mb-0">${itemFirstLet + itemRest}</p>
                             </div>
                         </div>`;
             
@@ -76,7 +76,7 @@ $(document).ready(function(){
         // Añadir botón de cargar más si no existe
         if (!$(".loader").length) {
             let loadMoreBtn = `<div class="loader row card mt-2 rounded-5 help">
-                            <p id="loader" class="ml-2 mt-1 d-flex justify-content-center align-items-center h-100 w-100">Load more</p>
+                            <p id="loader" class="ml-2 mt-1 d-flex justify-content-center align-items-center h-100 w-100 text">Load more</p>
                         </div>`;
             $(".item-cont").append(loadMoreBtn);
         }
@@ -138,16 +138,16 @@ $(document).ready(function(){
                                 <div class="col-6 d-flex flex-column justify-content-center part-right-cont">
                                     <!-- Nombre ocupa la mitad derecha (50% de col-6 = col-12 dentro del contenedor) -->
                                     <div class="w-100 h-50 d-flex justify-content-center align-items-center text-center mb-2 pantalla-arriba mt-5 rounded-4 borde">
-                                        <p class="mb-0">Name: <br> ${selectedItem.name}</p>
+                                        <p class="mb-0 text">Name: <br> ${selectedItem.name}</p>
                                     </div>
 
                                     <!-- Tipo y Precio juntos en fila -->
                                     <div class="d-flex align-items-center justify-content-between gap-3 h-50 mt-2">
                                         <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
-                                         <p class="mb-0">Category: <br> ${selectedItem.category.name}</p>       
+                                         <p class="mb-0 text">Category: <br> ${selectedItem.category.name}</p>       
                                         </div>
                                         <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
-                                            <p class="mb-0">Price: <br> ${selectedItem.cost} Pokecoins</p>
+                                            <p class="mb-0 text">Price: <br> ${selectedItem.cost} Pokecoins</p>
                                         </div>
                                     </div>
 
@@ -157,7 +157,7 @@ $(document).ready(function(){
 
                         <!-- Mitad de abajo -->
                         <div class="col-12 part-down-cont mt-3 rounded-4 d-flex justify-content-center align-items-center borde">
-                            <p class="mb-0 text-center">${selectedItem.effect_entries[0].effect}</p>
+                            <p class="mb-0 text-center text">${selectedItem.effect_entries[0].effect}</p>
                         </div>`;
 
             $("#selected").append(itemInfo);
@@ -184,16 +184,16 @@ $(document).ready(function(){
                             <div class="col-6 d-flex flex-column justify-content-center part-right-cont">
                                 <!-- Nombre ocupa la mitad derecha (50% de col-6 = col-12 dentro del contenedor) -->
                                 <div class="w-100 h-50 d-flex justify-content-center align-items-center text-center mb-2 pantalla-arriba mt-5 rounded-4 borde">
-                                    <p class="mb-0">Name: <br> Loading...</p>
+                                    <p class="mb-0 text">Name: <br> Loading...</p>
                                 </div>
 
                                 <!-- Tipo y Precio juntos en fila -->
                                 <div class="d-flex align-items-center justify-content-between gap-3 h-50 mt-2">
                                     <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
-                                     <p class="mb-0">Category: <br> Loading...</p>       
+                                     <p class="mb-0 text">Category: <br> Loading...</p>       
                                     </div>
                                     <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
-                                        <p class="mb-0">Price: <br> Loading... Pokecoins</p>
+                                        <p class="mb-0 text">Price: <br> Loading... Pokecoins</p>
                                     </div>
                                 </div>
 
@@ -203,7 +203,7 @@ $(document).ready(function(){
 
                     <!-- Mitad de abajo -->
                     <div class="col-12 part-down-cont mt-3 rounded-4 d-flex justify-content-center align-items-center borde">
-                        <p class="mb-0 text-center">Loading...</p>
+                        <p class="mb-0 text text-center">Loading...</p>
                     </div>`;
 
         $("#selected").append(itemInfo);
