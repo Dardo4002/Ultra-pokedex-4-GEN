@@ -41,6 +41,14 @@ body {
     margin-top: 20px;
     background-color: #5c2c2c;
     border-radius: 20px;
+    min-height: 1100px;
+  }
+
+  .gen4-body {
+    margin-top: 20px;
+    background-color: #5c2c2c;
+    border-radius: 20px;
+    min-height: 600px;
   
   }
   
@@ -56,7 +64,15 @@ body {
     border-radius: 20px;
     box-shadow: 5px 5px #2b1f1f;
     max-width: 80%;
-    min-height: 60%;
+    min-height: 50%;
+  }
+
+   .screenGen4 {
+    background-color: #cc0000;
+    border-radius: 20px;
+    box-shadow: 5px 5px #2b1f1f;
+    max-width: 55%;
+    min-height: 25%;
   }
   
   .screen-title {
