@@ -97,6 +97,30 @@ body span.DS-effect {
     display: block;
 }
 
+.speaker-row {
+    height: 10px;
+}
+
+.speaker-hole {
+    width: 6px;
+    height: 6px;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.speaker-holes {
+    height: 120px; /* Adjust based on how spread out you want them */
+}
+
+.speaker-hole-lg {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
 /* Borde */
 .borde{
     border: 5px solid var(--outline);
@@ -117,6 +141,77 @@ body span.DS-effect {
     height: 37vh;
     width: 110%;
 }
+
+/* Container for the D-pad */
+.dpad {
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+
+/* Center button */
+.dpad-center {
+    width: 30px;
+    height: 30px;
+    background-color: #555;
+    top: 25px;
+    left: 25px;
+    border-radius: 5px;
+}
+
+/* Arrow buttons */
+.dpad-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #777;
+    border-radius: 5px;
+}
+
+/* Positioning each button */
+.dpad-up {
+    top: 0;
+    left: 25px;
+}
+
+.dpad-down {
+    bottom: 0;
+    left: 25px;
+}
+
+.dpad-left {
+    top: 25px;
+    left: 0;
+}
+
+.dpad-right {
+    top: 25px;
+    right: 0;
+}
+
+.ds-buttons {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.ds-btn {
+    width: 35px;
+    height: 35px;
+    background-color: #777;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Positioning buttons in diamond layout */
+.btn-x { top: 0; left: 32.5px; }       /* Top (X) */
+.btn-y { top: 32.5px; left: 0; }       /* Left (Y) */
+.btn-a { top: 32.5px; right: 0; }      /* Right (A) */
+.btn-b { bottom: 0; left: 32.5px; }    /* Bottom (B) */
 
 
 /* PANTALLA ABAJO DECORACION DERECHA */
