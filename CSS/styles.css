@@ -277,9 +277,10 @@ body section.screen {
     scrollbar-gutter: stable;
     box-sizing: border-box;
     
-    max-height: 35vh;
+    max-height: 38vh;
     overflow-y: auto; /* por si acaso */
 }
+
 
 /* Personalización barra de scroll */
 .card-cont::-webkit-scrollbar {
