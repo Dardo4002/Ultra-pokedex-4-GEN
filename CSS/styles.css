@@ -40,6 +40,7 @@ body.bg-white {
     margin: 0px;
     gap: 0px;
     padding: 0px;
+    position: relative;
 }
 
 .page-top-down{
@@ -101,24 +102,21 @@ body span.DS-effect {
     height: 10px;
 }
 
+.speaker {
+    height: 80px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    left:10px;
+
+}
+
 .speaker-hole {
     width: 6px;
     height: 6px;
     background-color: black;
     border-radius: 50%;
     opacity: 0.5;
-}
-
-.speaker-holes {
-    height: 120px; /* Adjust based on how spread out you want them */
-}
-
-.speaker-hole-lg {
-    width: 10px;
-    height: 10px;
-    background-color: black;
-    border-radius: 50%;
-    opacity: 0.4;
 }
 
 /* Borde */
@@ -219,10 +217,14 @@ body span.DS-effect {
     height: 10vh;
 }
 
-.gray-rigth{
-    background-color: var(--coal);
-    height: 37vh;
-    margin-top: 3vh;
+.gray-right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background-color: transparent;
+    border-radius: 8px;
 }
 
 /* Pantallas */
@@ -279,6 +281,10 @@ body section.screen {
     
     max-height: 35vh;
     overflow-y: auto; /* por si acaso */
+}
+
+.item-cont{
+    max-height: 38vh;
 }
 
 /* Personalización barra de scroll */
