@@ -90,8 +90,8 @@ $(document).ready(function(){
 
         // Añadir manejadores de eventos
         $(".button").on("click", function() {
-            $(".button").parent().removeClass("slct");
-            $(this).parent().addClass("slct");
+            $(".button").parent().parent().removeClass("slct");
+            $(this).parent().parent().addClass("slct");
             let itemId = $(this).attr("id");
             loading();
             select(itemId);
