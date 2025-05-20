@@ -3,7 +3,7 @@
     --red: rgb(209, 60, 60);
     /* Cambiar el de abajo a uno mejor */
     --dark-red: rgb(94, 21, 21);
-
+    --blue: rgb(131, 195, 231);
     --silver: rgb(236, 236, 236);
     --coal: rgb(65, 65, 65);
     --outline: rgb(10, 10, 10);
@@ -72,12 +72,34 @@ body.bg-white {
     padding: 0px;
 }
 
+
+
+/* PANTALLA DE ARRIBA */
+
+.pantalla-arriba{
+    background-color: white;
+}
+
+.part-right-cont{
+    height: 20vh;
+}
+
+.part-down-cont{
+    height: 17vh;
+    background-color: white;
+}
+
 /* Decoración*/
 body span.DS-effect {
     background-color: aqua;
     width: 100px;
     height: 60vh;
     display: block;
+}
+
+/* Borde */
+.borde{
+    border: 5px solid var(--outline);
 }
 
 
@@ -115,3 +137,69 @@ body section.screen {
     height: 100%;
 }
 
+/* Común pantalla de abajo */
+.pantalla-abajo{
+    background-color: var(--blue);
+}
+
+/* Carrousel pantalla de abajo */
+.carrousel{
+    width: 90%;
+    height: 6vh;
+}
+
+/* Foto de abajo */
+.picture{
+    width: 15vh;
+    height: 15vh;
+}
+
+/* Botones para los filtros */
+.filters{
+    width: 80%;
+    height: 6vh;
+}
+
+/* Contenedor tarjetitas */
+.card-cont {
+    scrollbar-gutter: stable;
+    box-sizing: border-box;
+    
+    max-height: 35vh;
+    overflow-y: auto; /* por si acaso */
+}
+
+/* Personalización barra de scroll */
+.card-cont::-webkit-scrollbar {
+    width: 8px; /* ancho de la barra */
+}
+
+.card-cont::-webkit-scrollbar-track {
+    background: #83A867;
+    border-radius: 10px;
+}
+
+.card-cont::-webkit-scrollbar-thumb {
+    background: #2b2b2b;
+    border-radius: 10px;
+}
+
+.card-cont::-webkit-scrollbar-thumb:hover {
+    background: #1f1f1f;
+}
+
+/* Tarjetitas pantalla de abajo */
+.card {
+    width: 100%;
+    height: 4vh;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
