@@ -131,7 +131,7 @@ $(document).ready(function(){
                             <div class="row align-items-center">
                                 <!-- Imagen a la izquierda, ocupa el 50% -->
                                 <div class="col-6">
-                                    <img class="picture mt-4 ms-4" src="${selectedItem.sprites.default}" alt="Imagen">
+                                    <img class="picture smaller mt-4 ms-4" src="${selectedItem.sprites.default}" alt="Imagen">
                                 </div>
 
                                 <!-- Contenido textual a la derecha -->
