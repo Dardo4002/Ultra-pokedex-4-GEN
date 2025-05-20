@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    let offset = 0;
     fetch("https://pokeapi.co/api/v2/item/?limit=15&offset=0")
         .then(function(response){
             return response.json();
@@ -52,7 +52,38 @@ $(document).ready(function(){
             })
             .then(function(){
                 console.log(sortedItems);
-                
+                let loadMoreBtn= `<div class="loader row card mt-2 rounded-5 help">
+                                <p id="loader" class="ml-2 mt-1">Load more</p>
+                            </div>`;
+                $(".item-cont").append(loadMoreBtn)
+                $(".loader").on("click", function() 
+                                {
+                                    offset+=15;
+
+                                    console.log(offset);
+                                    
+                                    fetch("https://pokeapi.co/api/v2/item/?limit=15&offset=" + offset)
+                                    .then(function(response)
+                                            {
+                                            return response.json();
+            
+                                            }
+            
+                                        )
+                                    .then(function(result){
+                                        console.log(result);
+                                        let itemList = result.results;
+                                        itemList.forEach(function(item){
+                                                //Aqui lanzamos un fetch para cada item
+                                                fetchItemData(item)
+                                        })
+                                    })
+                                    .catch(function(err){
+
+                                        console.log(err);
+                                        
+                                    });
+                                });
             })
 
             .catch(function(err){
@@ -75,8 +106,8 @@ $(document).ready(function(){
                 let itemHTML;
                 
 
-                    itemHTML = `<div class="row card mt-2 rounded-5">
-                                <p id="${itemDetails.id}" class="ml-2 mt-1 select-btn">${itemFirstLet + itemRest}</p>
+                    itemHTML = `<div class="row card mt-2 rounded-5 help">
+                                <p id="${itemDetails.id}" class="ml-2 mt-1 button">${itemFirstLet + itemRest}</p>
                             </div>`;
                                 
                 
@@ -85,8 +116,9 @@ $(document).ready(function(){
                 $(".item-cont").append(itemHTML);
 
             })
-            $(".select-btn").on("click", function() {
-                
+            $(".button").on("click", function() {
+                $(".button").parent().removeClass("slct");
+                $(this).parent().addClass("slct");
                 let itemId = $(this).attr("id");
                 
                 loading();
@@ -154,7 +186,6 @@ $(document).ready(function(){
 
 
             
-            
         }
         function loading(){
             console.log("loading");
@@ -198,4 +229,5 @@ $(document).ready(function(){
             $("#selected").append(itemInfo);
 
         }
+        
 })

@@ -196,10 +196,13 @@ body section.screen {
 }
 
 
+.slct{
+    background-color: gray;
 
-
-
-
+}
+.help :hover{
+    background-color: gray;
+}
 
 
 /* MEDIA QUERIES */
