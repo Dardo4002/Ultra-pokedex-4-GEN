@@ -40,7 +40,6 @@ body.bg-white {
     margin: 0px;
     gap: 0px;
     padding: 0px;
-    position: relative;
 }
 
 .page-top-down{
@@ -102,21 +101,24 @@ body span.DS-effect {
     height: 10px;
 }
 
-.speaker {
-    height: 80px;
-    position: absolute;
-    top: 20px;
-    right: 10px;
-    left:10px;
-
-}
-
 .speaker-hole {
     width: 6px;
     height: 6px;
     background-color: black;
     border-radius: 50%;
     opacity: 0.5;
+}
+
+.speaker-holes {
+    height: 120px; /* Adjust based on how spread out you want them */
+}
+
+.speaker-hole-lg {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0.4;
 }
 
 /* Borde */
@@ -210,59 +212,17 @@ body span.DS-effect {
 .btn-y { top: 32.5px; left: 0; }       /* Left (Y) */
 .btn-a { top: 32.5px; right: 0; }      /* Right (A) */
 .btn-b { bottom: 0; left: 32.5px; }    /* Bottom (B) */
-.buttons-ds {
-    width: 80px;
-    height: 80px;
-    position: relative;
-}
 
-.btn-ds {
-    width: 30px;
-    height: 30px;
-    background-color: #777;
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-}
-
-/* Positioning like DS layout */
-.btn-a {
-    top: 25px;
-    right: 0;
-}
-
-.btn-b {
-    bottom: 0;
-    left: 25px;
-}
-
-.btn-x {
-    top: 0;
-    left: 25px;
-}
-
-.btn-y {
-    top: 25px;
-    left: 0;
-}
 
 /* PANTALLA ABAJO DECORACION DERECHA */
 .heigth{
     height: 10vh;
 }
 
-.gray-right {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 120px;
-    background-color: transparent;
-    border-radius: 8px;
+.gray-rigth{
+    background-color: var(--coal);
+    height: 37vh;
+    margin-top: 3vh;
 }
 
 /* Pantallas */
@@ -317,13 +277,10 @@ body section.screen {
     scrollbar-gutter: stable;
     box-sizing: border-box;
     
-    max-height: 35vh;
+    max-height: 38vh;
     overflow-y: auto; /* por si acaso */
 }
 
-.item-cont{
-    max-height: 38vh;
-}
 
 /* Personalización barra de scroll */
 .card-cont::-webkit-scrollbar {
