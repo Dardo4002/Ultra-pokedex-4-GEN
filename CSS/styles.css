@@ -445,6 +445,9 @@ body section.screen {
         height: 10%;
         border: 10px solid var(--outline)
     }
+    .screen-wrapper-top {
+        background-color: transparent;
+    }
 }
 
 
