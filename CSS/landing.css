@@ -113,7 +113,7 @@ body {
     text-shadow: 2px 2px #222;
   }
 
-  footer{
+ footer{
     width: 100%;
   }
 
@@ -121,7 +121,7 @@ body {
     max-width: 100%;
   }
 
-.imgSlide{
+  .imgSlide{
     width: 100%;
     height: auto;
     vertical-align: middle;
@@ -207,7 +207,7 @@ body {
 /* Fading animation */
 .fade {
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 5s;
 }
 
 @keyframes fade {
@@ -231,4 +231,43 @@ body {
   }
 }
 
+@media (max-width: 991px) {
+  .carrousellText {
+    font-size: 1.5rem;
+  }
 
+  .slideshow-container {
+    width: 90%;
+  }
+
+  .prev, .next {
+    font-size: 1.5rem;
+  }
+}
+
+/* Móviles (pantallas pequeñas: hasta 767px) */
+@media (max-width: 480px) {
+  .carrousellText {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  .slideshow-container {
+    width: 100%;
+  }
+
+  .imgSlide {
+    height: auto;
+  }
+
+  .prev, .next {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+  }
+}
