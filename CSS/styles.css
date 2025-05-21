@@ -299,6 +299,7 @@ body section.screen {
 }.carrousel2{
     width: 90%;
     height: 6vh;
+    margin-bottom: 7%;
 }
 
 .carrousel .sort {
@@ -318,8 +319,6 @@ body section.screen {
     font-weight: bold;
     cursor: pointer;
 }
-
-
 
 .carrousel .sort:not(.slct):hover {
     background-color: gray;

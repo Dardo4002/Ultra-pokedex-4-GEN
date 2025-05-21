@@ -77,15 +77,15 @@ $(document).ready(function(){
                 console.log(err);
             });
     });
-    
-// Añadir manejador de clic para el botón All
+
+    // Añadir manejador de clic para el botón All
     $("#all").on("click", function() {
         // Limpiar items existentes
         sortedItems = [];
         $(".item-cont").empty();
         
         // Obtener items de equipamiento
-        fetch("https://pokeapi.co/api/v2/items")
+        fetch("https://pokeapi.co/api/v2/item/id/")
             .then(function(response) {
                 return response.json();
             })
@@ -102,6 +102,7 @@ $(document).ready(function(){
                 console.log(err);
             });
     });
+    
     // Carga inicial
     fetch("https://pokeapi.co/api/v2/item/?limit=15&offset=0")
         .then(function(response){
@@ -217,7 +218,6 @@ $(document).ready(function(){
                 });
         });
     }
-    // comentario random
     function select(itemId){
         fetch("https://pokeapi.co/api/v2/item/" + itemId)
         .then(function(response){
