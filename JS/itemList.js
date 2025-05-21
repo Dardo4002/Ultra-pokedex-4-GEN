@@ -308,7 +308,7 @@ $(document).ready(function(){
                                          <p class="mb-0 button-text category-text">${selectedItem.category.name}</p>       
                                         </div>
                                         <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
-                                            <p class="mb-0 text button-text">${selectedItem.cost} Pokecoins</p>
+                                            <p class="mb-0 text button-text">${selectedItem.cost}P</p>
                                         </div>
                                     </div>
 
