@@ -275,6 +275,14 @@ body span.DS-effect {
   box-shadow: inset 0 1px 3px rgba(255,255,255,0.2), 0 2px 5px rgba(0,0,0,0.3);
 }
 
+.ds-extra-btn-2 {
+    width: 100%;
+    height: 100%;
+    background-color: var(--coal);
+    box-shadow: inset 0 1px 3px rgba(255,255,255,0.2), 0 2px 5px rgba(0,0,0,0.3);
+        
+}
+
 /* PANTALLA ABAJO DECORACION DERECHA */
 .heigth{
     height: 10vh;
