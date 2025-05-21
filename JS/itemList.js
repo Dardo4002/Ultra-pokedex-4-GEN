@@ -3,6 +3,82 @@ $(document).ready(function(){
     // Ocultar items inicialmente
     $(".item-cont").hide();
     
+    // Añadir manejador de clic para el botón Healing
+    $("#healing").on("click", function() {
+        // Limpiar items existentes
+        sortedItems = [];
+        $(".item-cont").empty();
+        
+        // Obtener items de curación
+        fetch("https://pokeapi.co/api/v2/item-category/27/?limit=10000&offset=0")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(result) {
+                console.log(result);
+                let itemList = result.items;
+                itemList.forEach(function(item) {
+                    fetchItemData(item);
+                });
+                // Mostrar items después de obtenerlos
+                $(".item-cont").show();
+            })
+            .catch(function(err) {
+                console.log(err);
+            });
+    });
+    
+    // Añadir manejador de clic para el botón Pokeballs
+    $("#pokeballs").on("click", function() {
+        // Limpiar items existentes
+        sortedItems = [];
+        $(".item-cont").empty();
+        
+        // Obtener items de pokeballs
+        fetch("https://pokeapi.co/api/v2/item-category/34/?limit=15&offset=15")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(result) {
+                console.log(result);
+                let itemList = result.items;
+                itemList.forEach(function(item) {
+                    fetchItemData(item);
+                });
+                // Mostrar items después de obtenerlos
+                $(".item-cont").show();
+            })
+            .catch(function(err) {
+                console.log(err);
+            });
+    });
+    
+    // Añadir manejador de clic para el botón Held
+    $("#held").on("click", function() {
+        // Limpiar items existentes
+        sortedItems = [];
+        $(".item-cont").empty();
+        
+        // Obtener items de equipamiento
+        fetch("https://pokeapi.co/api/v2/item-category/17/?limit=15&offset=0")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(result) {
+                console.log(result);
+                let itemList = result.items;
+                itemList.forEach(function(item) {
+                    fetchItemData(item);
+                });
+                // Mostrar items después de obtenerlos
+                $(".item-cont").show();
+            })
+            .catch(function(err) {
+                console.log(err);
+            });
+    });
+    
+    // Carga inicial
     fetch("https://pokeapi.co/api/v2/item/?limit=15&offset=0")
         .then(function(response){
             return response.json();
@@ -13,7 +89,7 @@ $(document).ready(function(){
             itemList.forEach(function(item){
                 fetchItemData(item);
             });
-            // Mostrar items después del primer fetch
+            // Mostrar items después de la primera carga
             $(".item-cont").show();
         })
         .catch(function(err){
@@ -63,7 +139,7 @@ $(document).ready(function(){
                                 <img src="${itemDetails.sprites.default}" alt="${itemName}" class="item-sprite">
                             </div>
                             <div class="col-9 d-flex justify-content-center align-items-center">
-                                <p id="${itemDetails.id}" class="button text mb-0">${itemFirstLet + itemRest}</p>
+                                <p id="${itemDetails.id}" class="text mb-0 button">${itemFirstLet + itemRest}</p>
                             </div>
                         </div>`;
             
@@ -76,7 +152,7 @@ $(document).ready(function(){
         // Añadir botón de cargar más si no existe
         if (!$(".loader").length) {
             let loadMoreBtn = `<div class="loader row card mt-2 rounded-5 help">
-                            <p id="loader" class="ml-2 mt-1 d-flex justify-content-center align-items-center h-100 w-100 text">Load more</p>
+                            <p id="loader" class="ml-2 mt-1 d-flex justify-content-center align-items-center h-100 w-100 text">Cargar más</p>
                         </div>`;
             $(".item-cont").append(loadMoreBtn);
         }
@@ -138,16 +214,16 @@ $(document).ready(function(){
                                 <div class="col-6 d-flex flex-column justify-content-center part-right-cont">
                                     <!-- Nombre ocupa la mitad derecha (50% de col-6 = col-12 dentro del contenedor) -->
                                     <div class="w-100 h-50 d-flex justify-content-center align-items-center text-center mb-2 pantalla-arriba mt-5 rounded-4 borde">
-                                        <p class="mb-0 text">Name: <br> ${selectedItem.name}</p>
+                                        <p class="mb-0 text">Nombre: <br> ${selectedItem.name}</p>
                                     </div>
 
                                     <!-- Tipo y Precio juntos en fila -->
                                     <div class="d-flex align-items-center justify-content-between gap-3 h-50 mt-2">
                                         <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
-                                         <p class="mb-0 text">Category: <br> ${selectedItem.category.name}</p>       
+                                         <p class="mb-0 text">Categoría: <br> ${selectedItem.category.name}</p>       
                                         </div>
                                         <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
-                                            <p class="mb-0 text">Price: <br> ${selectedItem.cost} Pokecoins</p>
+                                            <p class="mb-0 text">Precio: <br> ${selectedItem.cost} Pokecoins</p>
                                         </div>
                                     </div>
 
@@ -168,7 +244,7 @@ $(document).ready(function(){
     }
 
     function loading(){
-        console.log("loading");
+        console.log("cargando");
         
         $("#selected").empty();
         let itemInfo = `<div class="col-12">
@@ -184,16 +260,16 @@ $(document).ready(function(){
                             <div class="col-6 d-flex flex-column justify-content-center part-right-cont">
                                 <!-- Nombre ocupa la mitad derecha (50% de col-6 = col-12 dentro del contenedor) -->
                                 <div class="w-100 h-50 d-flex justify-content-center align-items-center text-center mb-2 pantalla-arriba mt-5 rounded-4 borde">
-                                    <p class="mb-0 text">Name: <br> Loading...</p>
+                                    <p class="mb-0 text">Nombre: <br> Cargando...</p>
                                 </div>
 
                                 <!-- Tipo y Precio juntos en fila -->
                                 <div class="d-flex align-items-center justify-content-between gap-3 h-50 mt-2">
                                     <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
-                                     <p class="mb-0 text">Category: <br> Loading...</p>       
+                                     <p class="mb-0 text">Categoría: <br> Cargando...</p>       
                                     </div>
                                     <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
-                                        <p class="mb-0 text">Price: <br> Loading... Pokecoins</p>
+                                        <p class="mb-0 text">Precio: <br> Cargando... Pokecoins</p>
                                     </div>
                                 </div>
 
@@ -203,9 +279,10 @@ $(document).ready(function(){
 
                     <!-- Mitad de abajo -->
                     <div class="col-12 part-down-cont mt-3 rounded-4 d-flex justify-content-center align-items-center borde">
-                        <p class="mb-0 text text-center">Loading...</p>
+                        <p class="mb-0 text text-center">Cargando...</p>
                     </div>`;
 
         $("#selected").append(itemInfo);
     }
+    
 });
