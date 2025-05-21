@@ -2,13 +2,14 @@
 :root {
     --red: rgb(209, 60, 60);
     /* Cambiar el de abajo a uno mejor */
-    --dark-red: rgb(94, 21, 21);
+    --dark-red: rgb(120, 25, 25);
     --blue: rgb(131, 195, 231);
     --silver: rgb(236, 236, 236);
     --silver-2:rgb(197, 197, 197);
     --coal: rgb(65, 65, 65);
     --outline: rgb(10, 10, 10);
-    --screen-hue: #83A867;
+    --screen-hue: rgb(131, 168, 103);
+    --green: rgb(113, 218, 33);
 }
 
 * {
@@ -113,7 +114,7 @@ body.bg-white {
 
 
 .pantalla-arriba{
-    background-color: white;
+    background-color: var(--silver);
 }
 
 .part-right-cont{
@@ -122,12 +123,12 @@ body.bg-white {
 
 .part-down-cont{
     height: 17vh;
-    background-color: white;
+    background-color: var(--silver);
 }
 
 /* Decoración*/
 body span.DS-effect {
-    background-color: aqua;
+    background-color: var(--blue);
     width: 100px;
     height: 60vh;
     display: block;
@@ -140,7 +141,7 @@ body span.DS-effect {
 .speaker-hole {
     width: 6px;
     height: 6px;
-    background-color: black;
+    background-color: var(--outline);
     border-radius: 50%;
     opacity: 0.5;
 }   
@@ -156,7 +157,7 @@ body span.DS-effect {
 .speaker-hole-lg {
     width: 10px;
     height: 10px;
-    background-color: black;
+    background-color: var(--outline);
     border-radius: 50%;
     opacity: 0.4;
 }
@@ -237,6 +238,10 @@ body span.DS-effect {
     right: 0;
 }
 
+.dpad-down, .dpad-right, .dpad-left,.dpad-up {
+    position: absolute;
+}
+
 .ds-buttons {
     width: 100px;
     height: 100px;
@@ -246,13 +251,13 @@ body span.DS-effect {
 .ds-btn {
     width: 35px;
     height: 35px;
-    background-color: #777;
+    background-color: var(--silver-2);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    color: white;
+    color: var(--silver);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
@@ -272,14 +277,14 @@ body span.DS-effect {
   height: 25px;
   background-color: var(--silver);
   border-radius: 50%;
-  box-shadow: inset 0 1px 3px rgba(255,255,255,0.2), 0 2px 5px rgba(0,0,0,0.3);
+  box-shadow: inset 0 1px 3px var(--coal), 0 2px 5px var(--outline);
 }
 
 .ds-extra-btn-2 {
     width: 100%;
     height: 100%;
     background-color: var(--coal);
-    box-shadow: inset 0 1px 3px rgba(255,255,255,0.2), 0 2px 5px rgba(0,0,0,0.3);
+    box-shadow: inset 0 1px 3px var(--coal), 0 2px 5px var(--outline);
         
 }
 
@@ -319,7 +324,7 @@ body section.screen {
 .carrousel .sort {
     height: 100%;
     border: none;
-    background-color: white;
+    background-color: var(--silver);
     color: black;
     font-weight: bold;
     cursor: pointer;
@@ -328,18 +333,18 @@ body section.screen {
 .carrousel2 .sort {
     height: 100%;
     border: none;
-    background-color: white;
+    background-color: var(--silver);
     color: black;
     font-weight: bold;
     cursor: pointer;
 }
 
 .carrousel .sort:not(.slct):hover {
-    background-color: gray;
+    background-color: var(--silver-2);
 }
 
 .carrousel .sort.slct {
-    background-color: rgb(66, 255, 75);
+    background-color: var(--green);
 }
 
 /* Foto de abajo */
@@ -370,24 +375,24 @@ body section.screen {
 }
 
 .card-cont::-webkit-scrollbar-track {
-    background: #83A867;
+    background: var(--screen-hue);
     border-radius: 10px;
 }
 
 .card-cont::-webkit-scrollbar-thumb {
-    background: #2b2b2b;
+    background: var(--coal);
     border-radius: 10px;
 }
 
 .card-cont::-webkit-scrollbar-thumb:hover {
-    background: #1f1f1f;
+    background: var(--outline);
 }
 
 /* Tarjetitas pantalla de abajo */
 .card {
     width: 100%;
     height: 4vh;
-    background-color: white;
+    background-color: var(--silver);
 }
 
 .item-sprite {
@@ -403,11 +408,11 @@ body section.screen {
 }
 
 .help:not(.slct):hover {
-    background-color: gray;
+    background-color: var(--coal);
 }
 
 .slct {
-    background-color: rgb(66, 255, 75);
+    background-color: var(--green);
 }
 
 /* MEDIA QUERIES */
@@ -419,16 +424,12 @@ body section.screen {
     display: none !important;
     }
     .more-width{
-        width: 400vw;
-    }
-    .more-height{
-        height: 400vh;
+        width: 50%;
     }
     .smaller{
         width: 12vh;
         height: 12vh;
     }
-    
     .text{
     font-size: calc(1vw + 0.5rem);
     text-overflow: ellipsis;
@@ -449,18 +450,20 @@ body section.screen {
         height: 10%;
         border: 10px solid var(--outline)
     }
+    .screen-wrapper-top {
+        background-color: transparent;
+    }
 }
 
 
 /* 📱 Teléfonos medianos a tablets pequeñas (576px a 767.98px) */
 @media (max-width: 770px) {
-    .non-display-extra{
+  .non-display-extra{
     display: none;
     }
     .more-width-extra{
         width: 100%;
         margin: 0px;
-        padding: 0px;
     }
     .text{
     font-size: calc(1vw + 0.5rem);
