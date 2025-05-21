@@ -18,6 +18,8 @@
     font-family: "Jersey 20", sans-serif;
     font-weight: 400;
     font-style: normal;
+    overflow-x: 0px !important;
+    overflow-y: 0px !important;
 }
 
 /* TEXTO */
@@ -398,26 +400,37 @@ body section.screen {
     display: none !important;
     }
     .more-width{
-        width: 50%;
+        width: 400vw;
+    }
+    .more-height{
+        height: 400vh;
     }
     .smaller{
         width: 12vh;
         height: 12vh;
     }
+    
     .text{
     font-size: calc(1vw + 0.5rem);
     text-overflow: ellipsis;
-}
+    }
+    .smaller-cont{
+        height: 10vw;
+        width: 10vh;
+        padding: 0px;
+        margin: 0px;
+    }
 }
 
 /* 📱 Teléfonos medianos a tablets pequeñas (576px a 767.98px) */
 @media (max-width: 770px) {
-  .non-display-extra{
+    .non-display-extra{
     display: none;
     }
     .more-width-extra{
         width: 100%;
         margin: 0px;
+        padding: 0px;
     }
     .less-height{
         height: 2%;
