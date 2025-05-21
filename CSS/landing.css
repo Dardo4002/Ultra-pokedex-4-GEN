@@ -1,3 +1,8 @@
+* {
+  font-family: "Jersey 20", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 body {
     background-color: #862323;
@@ -41,7 +46,6 @@ body {
     margin-top: 20px;
     background-color: #5c2c2c;
     border-radius: 20px;
-    min-height: 1100px;
   }
 
   .gen4-body {
@@ -103,11 +107,19 @@ body {
   }
   
   .custom-underline {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 0.2rem;
-}
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0.2rem;
+  }
+
+  .carrousellText{
+    color: white;
+    font-size: 4rem;
+    border-radius: 15px;
+    text-shadow: 2px 2px #222;
+  }
+
 
 @media (max-width: 768px) {
   .custom-underline {

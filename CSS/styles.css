@@ -257,6 +257,9 @@ body section.screen {
 .carrousel{
     width: 90%;
     height: 6vh;
+}.carrousel2{
+    width: 90%;
+    height: 6vh;
 }
 
 .carrousel .sort {
@@ -267,6 +270,17 @@ body section.screen {
     font-weight: bold;
     cursor: pointer;
 }
+
+.carrousel2 .sort {
+    height: 100%;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
 
 .carrousel .sort:not(.slct):hover {
     background-color: gray;
