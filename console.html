@@ -17,20 +17,20 @@
     <!-- Nuestro CSS -->
      <link rel="stylesheet" href="CSS/styles.css">
 </head>
-<body class="vh-100">
+<body class="h-75 w-auto">
      
     <!--Contenedor de pantallas  -->
     <section class="bg-white container-fluid vh-100 d-flex justify-content-center">
         
         <!-- Contenedor gordo del contenedor de pantallas y zonas rojas de los laterales -->
-        <div class="row flex-fill d-flex justify-content-center vh-100 total-background screen-decoration-container">
+        <div class="row flex-fill d-flex total-background">
 
             <!-- Línea lateral izquierda -->
             <div class="page-external col align-self-start page-external non-display"></div>
 
 
             <!-- Contenedor de pantallas y decoraciones laterales -->
-            <div class="col-6 row flex-fill d-flex vh-100">
+            <div class="col-6 row flex-fill d-flex vh-100 smaller-cont">
                 
                 <!-- Banda arriba-->
                 <div class="page-top-down col-12 less-height non-display"></div>
@@ -115,12 +115,7 @@
                 </div>
 
                 <!-- Banda central-->
-                <div class="page-internal col-12 less-height more-height rounded-5 d-flex justify-content-center align-items-center w-100">
-                    <a class="text-decoration-none text-reset w-100" href="index.html">
-                      <div class="ds-extra-btn-2 rounded-5 text-center w-100 text-light">RETURN</div>
-                    </a>
-                  </div>
-                                  
+                <div class="page-internal col-12 less-height"></div>
 
                 <div class="DS-console col-12 row">
 
@@ -149,16 +144,16 @@
                     </div>
                     
                     <!-- Pantalla 2 -->
-                    <section class="screen col-6 rounded-4 row more-width more-width-extra z-3">
-                        <!-- Botones de la izquierda-->
+                    <section class="screen col-6 rounded-4 row more-width more-width-extra more-height z-3">
+                        <!-- Botones de la izquierda, aún no funcionan -->
                         <div class="col-6 h-100 d-flex flex-column align-items-center gap-4">
 
                             <div class="buttons row carrousel pantalla-abajo rounded-3 mt-4">
                                 <div class="col-6 p-0">
-                                    <button class="sort w-100 button-text rounded-start-3" data-sort-by="name">A->Z</button>
+                                    <button class="sort w-100 rounded-start-3" data-sort-by="name">A->Z</button>
                                 </div>
                                 <div class="col-6 p-0">
-                                    <button class="sort w-100 button-text rounded-end-3" data-sort-by="number">Number</button>
+                                    <button class="sort w-100 rounded-end-3" data-sort-by="number">ID</button>
                                 </div>
                             </div>
                             
@@ -166,16 +161,12 @@
                             <img class="picture pantalla-abajo rounded-3 smaller image-fluid" src="Media/Img/Pt_Items_pocket_M.png" alt="">
                             
                             <div class="buttons row carrousel2 pantalla-abajo rounded-3 mt-4">
-                                <div class="col-4 p-0">
-                                    <button class="sort w-100 rounded-start-3" id="healing">Healing</button>
+                                <div class="col-6 p-0">
+                                    <button class="sort w-100 rounded-start-3" data-sort-by="name">A->Z</button>
                                 </div>
-                                <div class="col-4 p-0 ">
-                                    <button class="sort w-100" id="pokeballs">Pokeballs</button>
+                                <div class="col-6 p-0">
+                                    <button class="sort w-100 rounded-end-3" data-sort-by="number">ID</button>
                                 </div>
-                                <div class="col-4 p-0 ">
-                                    <button class="sort w-100 rounded-end-3" id="held">Held</button>
-                                </div>
-
                             </div>
                         </div>
                         <div class="item-cont card-cont col-6 h-100 overflow-auto mt-3">
@@ -220,8 +211,8 @@
                     <div class="page-side col-3 row non-display-extra less-height">
                         <div class="col-4 heigth gray-right rounded-end-5 z-1 gray-buttons">
                             <div class="ds-extra-buttons position-absolute bottom-2 start-50 translate-middle-x d-flex flex-column gap-2">
-                                <a class="text-decoration-none text-reset" href="index.html"><div class="ds-extra-btn"></div></a>
-                                <a class="text-decoration-none text-reset" href="index.html"><div class="ds-extra-btn"></div></a>
+                                <div class="ds-extra-btn"></div>
+                                <div class="ds-extra-btn"></div>
                             </div>
                         </div>
                         <!-- DS Buttons -->
@@ -253,6 +244,5 @@
     <!-- Nuestro JS -->
      <script src="JS/itemList.js"></script>
      <script src="JS/script.js"></script>
-     <!-- comentario random -->
 </body>
 </html>
