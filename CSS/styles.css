@@ -5,6 +5,7 @@
     --dark-red: rgb(94, 21, 21);
     --blue: rgb(131, 195, 231);
     --silver: rgb(236, 236, 236);
+    --silver-2:rgb(197, 197, 197);
     --coal: rgb(65, 65, 65);
     --outline: rgb(10, 10, 10);
     --screen-hue: #83A867;
@@ -50,7 +51,7 @@ body.bg-white {
 
 /* Decoraciones internas */
 .page-side {
-    background-color: var(--red);
+    /* background-color: var(--red); */
     height: 100%;
 
     margin: 0px;
@@ -92,6 +93,13 @@ body.bg-white {
 
 /* PANTALLA DE ARRIBA */
 
+.screen-wrapper-top {
+    background-color: var(--coal); /* or another dark gray */
+    border-radius: 16px;           /* smooth edges */
+    height: 100%;
+}
+
+
 .pantalla-arriba{
     background-color: white;
 }
@@ -123,10 +131,14 @@ body span.DS-effect {
     background-color: black;
     border-radius: 50%;
     opacity: 0.5;
-}
+}   
 
 .speaker-holes {
     height: 120px; /* Adjust based on how spread out you want them */
+}
+
+.speaker-positioner{
+    position: relative;
 }
 
 .speaker-hole-lg {
@@ -135,6 +147,15 @@ body span.DS-effect {
     background-color: black;
     border-radius: 50%;
     opacity: 0.4;
+}
+
+.speaker {
+    position: absolute;
+    top: 20px;
+    left: 10px; 
+    right: 10px;
+    bottom: 10px;
+    top: 10px;
 }
 
 /* Borde */
@@ -169,17 +190,17 @@ body span.DS-effect {
 .dpad-center {
     width: 30px;
     height: 30px;
-    background-color: #555;
+    background-color: var(--silver-2);
     top: 25px;
     left: 25px;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 /* Arrow buttons */
 .dpad-btn {
     width: 30px;
     height: 30px;
-    background-color: #777;
+    background-color: var(--silver);
     border-radius: 5px;
 }
 
@@ -223,19 +244,31 @@ body span.DS-effect {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
-/* Positioning buttons in diamond layout */
-.btn-x { top: -300%; left: 80%; }       /* Top (X) */
-.btn-y { top: -250%; left: 30%; }       /* Left (Y) */
-.btn-a { top: -250%; left: 130%; }      /* Right (A) */
-.btn-b { top: -200%; left: 80%; }    /* Bottom (B) */
+.gray-buttons{
+ position: relative;
+}
+.ds-extra-buttons {
+  /* Container positioned near bottom center */
+  display: flex !important;
+  justify-content: center;
+  align-items: end;
+  margin-top: 150px;
+}
 
+.ds-extra-btn {
+  width: 25px;
+  height: 25px;
+  background-color: var(--silver);
+  border-radius: 50%;
+  box-shadow: inset 0 1px 3px rgba(255,255,255,0.2), 0 2px 5px rgba(0,0,0,0.3);
+}
 
 /* PANTALLA ABAJO DECORACION DERECHA */
 .heigth{
     height: 10vh;
 }
 
-.gray-rigth{
+.gray-right{
     background-color: var(--coal);
     height: 37vh;
     margin-top: 3vh;
