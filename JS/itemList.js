@@ -78,6 +78,30 @@ $(document).ready(function(){
             });
     });
     
+// Añadir manejador de clic para el botón All
+    $("#all").on("click", function() {
+        // Limpiar items existentes
+        sortedItems = [];
+        $(".item-cont").empty();
+        
+        // Obtener items de equipamiento
+        fetch("https://pokeapi.co/api/v2/items")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(result) {
+                console.log(result);
+                let itemList = result.items;
+                itemList.forEach(function(item) {
+                    fetchItemData(item);
+                });
+                // Mostrar items después de obtenerlos
+                $(".item-cont").show();
+            })
+            .catch(function(err) {
+                console.log(err);
+            });
+    });
     // Carga inicial
     fetch("https://pokeapi.co/api/v2/item/?limit=15&offset=0")
         .then(function(response){
@@ -135,11 +159,11 @@ $(document).ready(function(){
             let itemRest = itemName.slice(1,itemName.length);
             
             let itemHTML = `<div class="row card mt-2 rounded-5 help">
-                            <div class="col-3 d-flex justify-content-center align-items-center">
-                                <img src="${itemDetails.sprites.default}" alt="${itemName}" class="item-sprite">
+                            <div class="col-3 d-flex justify-content-center align-items-center lazy">
+                                <img src="${itemDetails.sprites.default}" alt="${itemName}" class="lazy item-sprite">
                             </div>
                             <div class="col-9 d-flex justify-content-center align-items-center">
-                                <p id="${itemDetails.id}" class="text mb-0 button">${itemFirstLet + itemRest}</p>
+                                <p id="${itemDetails.id}" class="text mb-0 button lazy button-text">${itemFirstLet + itemRest}</p>
                             </div>
                         </div>`;
             
@@ -214,16 +238,16 @@ $(document).ready(function(){
                                 <div class="col-6 d-flex flex-column justify-content-center part-right-cont">
                                     <!-- Nombre ocupa la mitad derecha (50% de col-6 = col-12 dentro del contenedor) -->
                                     <div class="w-100 h-50 d-flex justify-content-center align-items-center text-center mb-2 pantalla-arriba mt-5 rounded-4 borde">
-                                        <p class="mb-0 text">Nombre: <br> ${selectedItem.name}</p>
+                                        <p class="mb-0 text button-text">${selectedItem.name}</p>
                                     </div>
 
                                     <!-- Tipo y Precio juntos en fila -->
                                     <div class="d-flex align-items-center justify-content-between gap-3 h-50 mt-2">
                                         <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
-                                         <p class="mb-0 text">Categoría: <br> ${selectedItem.category.name}</p>       
+                                         <p class="mb-0 button-text category-text">${selectedItem.category.name}</p>       
                                         </div>
                                         <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
-                                            <p class="mb-0 text">Precio: <br> ${selectedItem.cost} Pokecoins</p>
+                                            <p class="mb-0 text button-text">${selectedItem.cost} Pokecoins</p>
                                         </div>
                                     </div>
 
