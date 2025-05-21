@@ -127,15 +127,13 @@ body {
     vertical-align: middle;
 }
 
-/* Slideshow container */
+/* Slideshow*/
 .slideshow-container {
     max-width: 720px;
     position: relative;
     margin: auto;
     margin-top: 4em;
 }
-
-/* Hide the images by default */
 .mySlides {
     display: none;
 }
@@ -147,8 +145,6 @@ body {
 .hide-slide {
     display: none;
 }
-
-/* Next & previous buttons */
 .prev,
 .next {
     cursor: pointer;
@@ -163,22 +159,18 @@ body {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    text-decoration: none;
 }
-
-/* Position the "next button" to the right */
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
+    text-decoration: none;
 }
-
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+
 }
-
-
-/* Number text (1/3 etc) */
 .numbertext {
     color: #f2f2f2;
     font-size: 12px;
@@ -187,7 +179,6 @@ body {
     top: 0;
 }
 
-/* The dots/bullets/indicators */
 .dot {
     cursor: pointer;
     height: 15px;
@@ -204,7 +195,6 @@ body {
     background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
     animation-name: fade;
     animation-duration: 5s;
@@ -221,13 +211,13 @@ body {
 
 @media (max-width: 768px) {
   .custom-underline {
-    width: 70%; /* en pantallas chicas la línea es más ancha */
+    width: 70%; 
   }
 }
 
 @media (max-width: 480px) {
   .custom-underline {
-    width: 90%; /* en móviles, casi el ancho completo */
+    width: 90%; 
   }
 }
 
@@ -245,7 +235,7 @@ body {
   }
 }
 
-/* Móviles (pantallas pequeñas: hasta 767px) */
+/* Móviles*/
 @media (max-width: 480px) {
   .carrousellText {
     font-size: 1.2rem;
