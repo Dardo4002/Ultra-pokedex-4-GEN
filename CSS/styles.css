@@ -30,7 +30,7 @@
   text-overflow: ellipsis;
 } */
  .text{
-    font-size: calc(0.75rem);
+    font-size: calc(1rem);
     text-overflow: ellipsis;
     overflow: hidden;
     
@@ -422,7 +422,7 @@ body section.screen {
 
 .category-text
     {
-    font-size: calc(0.2rem) !important; 
+    font-size: calc(1rem) !important; 
     }
 /* MEDIA QUERIES */
 
@@ -487,6 +487,6 @@ body section.screen {
     }
     .category-text
     {
-    font-size: calc(0.5rem) !important; 
+    font-size: calc(1rem) !important; 
     }
 }
