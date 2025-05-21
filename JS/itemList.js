@@ -3,6 +3,66 @@ $(document).ready(function(){
     // Ocultar items inicialmente
     $(".item-cont").hide();
     
+    // Añadir manejador de clic para el botón de mochila
+    $(".bckpck").on("click", function() {
+        // Limpiar items existentes
+        sortedItems = [];
+        $(".item-cont").empty();
+        $("#selected").empty();
+        
+        // Cargar items iniciales
+        fetch("https://pokeapi.co/api/v2/item/?limit=15&offset=0")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(result){
+                console.log(result);
+                let itemList = result.results;
+                itemList.forEach(function(item){
+                    fetchItemData(item);
+                });
+                // Mostrar items después de la carga
+                $(".item-cont").show();
+            })
+            .catch(function(err){
+                console.log(err);
+            });
+            let selectedItem = `<div class="col-12">
+                            <div class="row align-items-center">
+                                <!-- Imagen a la izquierda, ocupa el 50% -->
+                                <div class="col-6">
+                                    <img class="picture smaller mt-4 ms-4" src="Media/Img/questionMark.webp" alt="Imagen">
+                                </div>
+
+                                <!-- Contenido textual a la derecha -->
+                                <div class="col-6 d-flex flex-column justify-content-center part-right-cont">
+                                    <!-- Nombre ocupa la mitad derecha (50% de col-6 = col-12 dentro del contenedor) -->
+                                    <div class="w-100 h-50 d-flex justify-content-center align-items-center text-center mb-2 pantalla-arriba mt-5 rounded-4 borde">
+                                        <p class="mb-0 text button-text">Name</p>
+                                    </div>
+
+                                    <!-- Tipo y Precio juntos en fila -->
+                                    <div class="d-flex align-items-center justify-content-between gap-3 h-50 mt-2">
+                                        <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
+                                         <p class="mb-0 button-text category-text">Object Type</p>       
+                                        </div>
+                                        <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
+                                            <p class="mb-0 text button-text">Price</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mitad de abajo -->
+                        <div class="col-12 part-down-cont mt-3 rounded-4 d-flex justify-content-center align-items-center borde">
+                            <p class="mb-0 text-center text">Please select an item</p>
+                        </div>`;
+
+            $("#selected").append(selectedItem);
+    });
+    
     // Añadir manejador de clic para el botón Healing
     $("#healing").on("click", function() {
         // Limpiar items existentes
