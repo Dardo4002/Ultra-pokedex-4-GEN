@@ -420,6 +420,10 @@ body section.screen {
     background-color: var(--green);
 }
 
+.category-text
+    {
+    font-size: calc(0.2rem) !important; 
+    }
 /* MEDIA QUERIES */
 
 
@@ -448,7 +452,7 @@ body section.screen {
     }
     .category-text
     {
-    font-size: calc(0.5rem); 
+    font-size: calc(0.3rem) !important; 
     }
 
     .more-height{
@@ -483,6 +487,6 @@ body section.screen {
     }
     .category-text
     {
-    font-size: calc(1.3vw + 0.5rem); 
+    font-size: calc(0.5rem) !important; 
     }
 }
