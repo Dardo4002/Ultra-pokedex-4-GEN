@@ -18,6 +18,7 @@
     font-family: "Jersey 20", sans-serif;
     font-weight: 400;
     font-style: normal;
+    overflow: hidden;
 }
 
 /* TEXTO */
@@ -37,6 +38,11 @@
 /* color de fondo del todo */
 .total-background{
     background-color: var(--dark-red);
+}
+
+/* Contenedor de papayas */
+.screen-decoration-container{
+    background-color: var(--red);
 }
 
 /* Contenedor de pantallas */
@@ -426,6 +432,11 @@ body section.screen {
     {
     font-size: calc(0.5rem); 
     }
+
+    .more-height{
+        height: 10%;
+        border: 10px solid var(--outline)
+    }
 }
 
 
@@ -437,9 +448,6 @@ body section.screen {
     .more-width-extra{
         width: 100%;
         margin: 0px;
-    }
-    .less-height{
-        height: 2%;
     }
     .text{
     font-size: calc(1vw + 0.5rem);
