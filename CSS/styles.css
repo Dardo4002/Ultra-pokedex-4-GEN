@@ -21,12 +21,18 @@
 }
 
 /* TEXTO */
-.text-wrap{
+/* .text-wrap{
   font-size: clamp(0.5rem, 2vw, 1.2rem);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
+} */
+ .text{
+    font-size: calc(0.75rem);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    
+ }
 
 /* color de fondo del todo */
 .total-background{
@@ -372,9 +378,11 @@ body section.screen {
 }
 
 .item-sprite {
-    width: 32px;
-    height: 32px;
+    width: 2vw;
+    height: 2vw;
     object-fit: contain;
+    min-height: 25px;
+    min-width: 25px;
 }
 
 .help {
@@ -407,8 +415,16 @@ body section.screen {
     .text{
     font-size: calc(1vw + 0.5rem);
     text-overflow: ellipsis;
+    }
+    .item-sprite {
+    min-height: 15px;
+    min-width: 15px;
+    }
+    .button-text {
+    font-size: calc(1vw + 0.5rem);
+    }
 }
-}
+
 
 /* 📱 Teléfonos medianos a tablets pequeñas (576px a 767.98px) */
 @media (max-width: 770px) {
@@ -421,5 +437,16 @@ body section.screen {
     }
     .less-height{
         height: 2%;
+    }
+    .text{
+    font-size: calc(1vw + 0.5rem);
+    text-overflow: ellipsis;  
+    }
+    .item-sprite {
+    min-height: 22px;
+    min-width: 22px;
+    }
+    .button-text {
+    font-size: calc(2vw + 0.5rem);
     }
 }
