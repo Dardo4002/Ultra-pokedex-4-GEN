@@ -117,6 +117,10 @@ body {
     width: 100%;
   }
 
+  .carousel-item{
+    max-width: 100%;
+  }
+
 
 
 
