@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
     <title>Pokemon ItemDex: The Go-to place for your pokemon item </title>
 
 
@@ -17,29 +20,38 @@
 <body class="vh-100">
      
     <!--Contenedor de pantallas  -->
-    <section class="bg-white container-fluid vh-100">
+    <section class="bg-white container-fluid vh-100 d-flex justify-content-center">
         
         <!-- Contenedor gordo del contenedor de pantallas y zonas rojas de los laterales -->
-        <div class="row flex-fill d-flex vh-100">
+        <div class="row flex-fill d-flex vh-100 total-background">
 
             <!-- Línea lateral izquierda -->
-            <div class="page-external col align-self-start page-external"></div>
+            <div class="page-external col align-self-start page-external non-display"></div>
 
 
             <!-- Contenedor de pantallas y decoraciones laterales -->
-            <div class="col-6 row flex-fill d-flex vh-100 align-items-start">
+            <div class="col-6 row flex-fill d-flex vh-100">
                 
                 <!-- Banda arriba-->
-                <div class="page-top-down col-12"></div>
+                <div class="page-top-down col-12 less-height"></div>
 
                 <!-- DS -->
-                <div class="DS-console col-12 row">
+                <div class="DS-console col-12 row mt-0">
+                    <div class="speaker-row d-flex justify-content-center gap-2 mt-0 non-display">
+                        <div class="speaker-hole non-display"></div>
+                        <div class="speaker-hole non-display"></div>
+                        <div class="speaker-hole non-display"></div>
+                        <div class="speaker-hole non-display"></div>
+                        <div class="speaker-hole non-display"></div>
+                    </div>
+                    
 
                     <!-- Decoraciones laterales 1 -->
-                    <div class="page-side col-3"></div>
-
+                    <div class="page-side col-3 non-display-extra"></div>
+                    <!-- Speaker holes -->
+                     
                     <!-- Pantalla 1 -->
-                    <section id="selected" class="screen col-6 rounded-4">
+                    <section id="selected" class="screen col-6 rounded-4 more-width-extra">
                         <!-- Mitad de arriba -->
                         <div class="col-12">
                             <div class="row align-items-center">
@@ -56,7 +68,7 @@
                                     </div>
 
                                     <!-- Tipo y Precio juntos en fila -->
-                                    <div class="d-flex align-items-center justify-content-between gap-3 h-50 mt-2">
+                                    <div class="d-flex align-items-center justify-content-between gap-2 h-50 mt-2">
                                         <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
                                             <p class="mb-0">Object Type</p>
                                         </div>
@@ -76,25 +88,33 @@
                     </section>
 
                     <!-- Decoraciones laterales 2 -->
-                    <div class="page-side col-3"></div>
+                    <div class="page-side col-3 non-display-extra"></div>
 
                 </div>
 
                 <!-- Banda central-->
-                <div class="page-internal col-12"></div>
+                <div class="page-internal col-12 less-height"></div>
 
                 <div class="DS-console col-12 row">
 
                     <!-- Decoraciones laterales 1 -->
-                    <div class="page-side col-3">
+                    <div class="page-side col-3 non-display-extra">
 
                         <!-- Parte arriba -->
                         <div class="col-12 up-down-cross"></div>
 
                         <!-- Gris del centro con la cruceta -->
-                         <div class="col-12 gray-left">
+                        <div class="col-12 gray-left d-flex justify-content-center align-items-center non-display-extra">
                             <!-- Aquí va la cruz (ayuda D:) -->
-                         </div>
+                            <div class="dpad position-relative mx-auto mt-4 non-display-extra">
+                                <div class="dpad-up dpad-btn position-absolute"></div>
+                                <div class="dpad-down dpad-btn position-absolute"></div>
+                                <div class="dpad-left dpad-btn position-absolute"></div>
+                                <div class="dpad-right dpad-btn position-absolute"></div>
+                                <div class="dpad-center position-absolute"></div>
+                            </div>
+                            
+                        </div>
 
                         <!-- Parte abajo -->
                         <div class="col-12 up-down-cross"></div>
@@ -102,22 +122,27 @@
                     </div>
                     
                     <!-- Pantalla 2 -->
-                    <section class="screen col-6 rounded-4 row">
+                    <section class="screen col-6 rounded-4 row more-width more-width-extra">
                         <!-- Botones de la izquierda, aún no funcionan -->
                         <div class="col-6 h-100 d-flex flex-column align-items-center gap-4">
 
-                            <div class="row carrousel pantalla-abajo rounded-3 mt-4">
-
+                            <div class="buttons row carrousel pantalla-abajo rounded-3 mt-4">
+                                <div class="col-6 p-0">
+                                    <button class="sort w-100 rounded-start-3" data-sort-by="name">A->Z</button>
+                                </div>
+                                <div class="col-6 p-0">
+                                    <button class="sort w-100 rounded-end-3" data-sort-by="number">ID</button>
+                                </div>
                             </div>
                             
                             <!-- Imagen de la bolsa, con JS hacer que cambie su imagen a otra en función de cual fintro esté activado -->
-                            <img class="picture pantalla-abajo rounded-3" src="Media/Img/Pt_Items_pocket_M.png" alt="">
+                            <img class="picture pantalla-abajo rounded-3 smaller" src="Media/Img/Pt_Items_pocket_M.png" alt="">
                             
                             <div class="row filters pantalla-abajo rounded-3">
 
                             </div>
                         </div>
-                        <div class="item-cont col-6 h-100 overflow-auto mt-3">
+                        <div class="item-cont card-cont col-6 h-100 overflow-auto mt-3">
                             <!-- Todas las tarjetitas, se meten cosas con código de JS-->
                             <div class="row card mt-2 rounded-5">
                                 <p class="ml-2 mt-1">NOMBRE DEL ITEM</p>
@@ -156,10 +181,13 @@
                     </section>
 
                     <!-- Decoraciones laterales 2 -->
-                    <div class="page-side col-3 row">
+                    <div class="page-side col-3 row non-display-extra less-height">
                         <div class="col-4 heigth gray-rigth rounded-end-5"></div>
-                        <div class="col-4 heigth"></div>
-                        <div class="col-4 heigth"></div>
+                        <!-- DS Buttons -->
+                        <div class="col-12 d-flex justify-content-center align-items-center mt-3 d-none">
+                        <div class="ds-buttons position-relative d-none">
+                        </div>
+                        </div>
                     </div>
 
                 </div>
@@ -169,7 +197,7 @@
             </div> 
 
             <!-- Línea lateral derecha -->
-            <div class="page-external col align-self-start"></div>
+            <div class="page-external col align-self-start non-display"></div>
         </div>
         
             

@@ -14,6 +14,22 @@
     margin: 0px;
     padding: 0px;
     gap: 0px;
+    font-family: "Jersey 20", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* TEXTO */
+.text-wrap{
+  font-size: clamp(0.5rem, 2vw, 1.2rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* color de fondo del todo */
+.total-background{
+    background-color: var(--dark-red);
 }
 
 /* Contenedor de pantallas */
@@ -97,6 +113,30 @@ body span.DS-effect {
     display: block;
 }
 
+.speaker-row {
+    height: 10px;
+}
+
+.speaker-hole {
+    width: 6px;
+    height: 6px;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.speaker-holes {
+    height: 120px; /* Adjust based on how spread out you want them */
+}
+
+.speaker-hole-lg {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
 /* Borde */
 .borde{
     border: 5px solid var(--outline);
@@ -117,6 +157,77 @@ body span.DS-effect {
     height: 37vh;
     width: 110%;
 }
+
+/* Container for the D-pad */
+.dpad {
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+
+/* Center button */
+.dpad-center {
+    width: 30px;
+    height: 30px;
+    background-color: #555;
+    top: 25px;
+    left: 25px;
+    border-radius: 5px;
+}
+
+/* Arrow buttons */
+.dpad-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #777;
+    border-radius: 5px;
+}
+
+/* Positioning each button */
+.dpad-up {
+    top: 0;
+    left: 25px;
+}
+
+.dpad-down {
+    bottom: 0;
+    left: 25px;
+}
+
+.dpad-left {
+    top: 25px;
+    left: 0;
+}
+
+.dpad-right {
+    top: 25px;
+    right: 0;
+}
+
+.ds-buttons {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.ds-btn {
+    width: 35px;
+    height: 35px;
+    background-color: #777;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Positioning buttons in diamond layout */
+.btn-x { top: -300%; left: 80%; }       /* Top (X) */
+.btn-y { top: -250%; left: 30%; }       /* Left (Y) */
+.btn-a { top: -250%; left: 130%; }      /* Right (A) */
+.btn-b { top: -200%; left: 80%; }    /* Bottom (B) */
 
 
 /* PANTALLA ABAJO DECORACION DERECHA */
@@ -148,6 +259,23 @@ body section.screen {
     height: 6vh;
 }
 
+.carrousel .sort {
+    height: 100%;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.carrousel .sort:not(.slct):hover {
+    background-color: gray;
+}
+
+.carrousel .sort.slct {
+    background-color: rgb(66, 255, 75);
+}
+
 /* Foto de abajo */
 .picture{
     width: 15vh;
@@ -165,9 +293,10 @@ body section.screen {
     scrollbar-gutter: stable;
     box-sizing: border-box;
     
-    max-height: 35vh;
+    max-height: 90%;
     overflow-y: auto; /* por si acaso */
 }
+
 
 /* Personalización barra de scroll */
 .card-cont::-webkit-scrollbar {
@@ -195,11 +324,55 @@ body section.screen {
     background-color: white;
 }
 
+.item-sprite {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
 
+.help {
+    cursor: pointer;
+}
 
+.help:not(.slct):hover {
+    background-color: gray;
+}
 
-
-
-
+.slct {
+    background-color: rgb(66, 255, 75);
+}
 
 /* MEDIA QUERIES */
+
+
+/* 📱 Teléfonos pequeños (pantallas menores a 576px) */
+@media (max-width: 1000px) {
+  .non-display{
+    display: none !important;
+    }
+    .more-width{
+        width: 50%;
+    }
+    .smaller{
+        width: 12vh;
+        height: 12vh;
+    }
+    .text{
+    font-size: calc(1vw + 0.5rem);
+    text-overflow: ellipsis;
+}
+}
+
+/* 📱 Teléfonos medianos a tablets pequeñas (576px a 767.98px) */
+@media (max-width: 770px) {
+  .non-display-extra{
+    display: none;
+    }
+    .more-width-extra{
+        width: 100%;
+        margin: 0px;
+    }
+    .less-height{
+        height: 2%;
+    }
+}
