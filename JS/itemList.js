@@ -117,7 +117,7 @@ $(document).ready(function(){
                 });
         });
     }
-    
+    // comentario random
     function select(itemId){
         fetch("https://pokeapi.co/api/v2/item/" + itemId)
         .then(function(response){
