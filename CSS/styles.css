@@ -353,6 +353,11 @@ body section.screen {
     height: 15vh;
 }
 
+#mochila :hover{
+    background-color: rgb(95, 95, 95);
+    cursor: pointer;
+}
+
 /* Botones para los filtros */
 .filters{
     width: 80%;
