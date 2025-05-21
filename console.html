@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
+    <title>Pokemon ItemDex: The Go-to place for your pokemon item </title>
+
+
+    <!-- Link BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+    <!-- Nuestro CSS -->
+     <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body class="vh-100">
+     
+    <!--Contenedor de pantallas  -->
+    <section class="bg-white container-fluid vh-100 d-flex justify-content-center">
+        
+        <!-- Contenedor gordo del contenedor de pantallas y zonas rojas de los laterales -->
+        <div class="row flex-fill d-flex justify-content-center vh-100 total-background screen-decoration-container">
+
+            <!-- Línea lateral izquierda -->
+            <div class="page-external col align-self-start page-external non-display"></div>
+
+
+            <!-- Contenedor de pantallas y decoraciones laterales -->
+            <div class="col-6 row flex-fill d-flex vh-100">
+                
+                <!-- Banda arriba-->
+                <div class="page-top-down col-12 less-height non-display"></div>
+
+                <!-- DS -->
+                <div class="DS-console col-12 row mt-0">
+                    
+                    
+                    
+                    <!-- Decoraciones laterales 1 -->
+                    <div class="page-side speaker-positioner col-3 non-display-extra">
+                        <!-- Speaker holes -->
+                           <div class="speaker d-flex flex-column justify-content-center align-items-center gap-1 mt-2">
+                               <div class="col-6 d-flex flex-row justify-content-center align-items-center gap-1 mt-2">
+                                   <div class="speaker-hole"></div>
+                                   <div class="speaker-hole"></div>
+                                   <div class="speaker-hole"></div>
+                               </div>
+                               <div class="col-6 d-flex flex-row justify-content-center align-items-center gap-1 mt-2">
+                                   <div class="speaker-hole"></div>
+                                   <div class="speaker-hole"></div>
+                                   <div class="speaker-hole"></div>
+                               </div>
+                           </div>
+                    </div>
+                    <!-- Speaker holes -->
+                    <div class="screen-wrapper-top col-12 col-sm-6 d-flex more-width-extra justify-content-center align-items-center"> 
+                        <!-- Pantalla 1 -->
+                        <section id="selected" class="screen rounded-4 vw-100">
+                            <!-- Mitad de arriba -->
+                            <div class="col-12">
+                                <div class="row align-items-center">
+                                    <!-- Imagen a la izquierda, ocupa el 50% -->
+                                    <div class="col-6">
+                                        <img class="picture mt-4 ms-4" src="Media/Img/questionMark.webp" alt="Imagen">
+                                    </div>
+
+                                    <!-- Contenido textual a la derecha -->
+                                    <div class="col-6 d-flex flex-column justify-content-center part-right-cont">
+                                        <!-- Nombre ocupa la mitad derecha (50% de col-6 = col-12 dentro del contenedor) -->
+                                        <div class="w-100 h-50 d-flex justify-content-center align-items-center text-center mb-2 pantalla-arriba mt-5 rounded-4 borde">
+                                            <p class="mb-0">Name</p>
+                                        </div>
+
+                                        <!-- Tipo y Precio juntos en fila -->
+                                        <div class="d-flex align-items-center justify-content-between gap-2 h-50 mt-2">
+                                            <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
+                                                <p class="mb-0">Object Type</p>
+                                            </div>
+                                            <div class="w-50 h-100 d-flex justify-content-center align-items-center text-center pantalla-arriba rounded-4 borde">
+                                                <p class="mb-0">Price</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Mitad de abajo -->
+                            <div class="col-12 part-down-cont mt-3 rounded-4 d-flex justify-content-center align-items-center borde">
+                                <p class="mb-0 text-center">Please select an item</p>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- Decoraciones laterales 2 -->
+                    <div class="page-side speaker-positioner col-3 non-display-extra">
+                        <!-- Speaker holes -->
+                           <div class="speaker d-flex flex-column justify-content-center align-items-center gap-1 mt-2">
+                               <div class="col-6 d-flex flex-row justify-content-center align-items-center gap-1 mt-2">
+                                   <div class="speaker-hole"></div>
+                                   <div class="speaker-hole"></div>
+                                   <div class="speaker-hole"></div>
+                               </div>
+                               <div class="col-6 d-flex flex-row justify-content-center align-items-center gap-1 mt-2">
+                                   <div class="speaker-hole"></div>
+                                   <div class="speaker-hole"></div>
+                                   <div class="speaker-hole"></div>
+                               </div>
+                           </div>
+                    </div>
+
+                </div>
+
+                <!-- Banda central-->
+                <div class="page-internal col-12 less-height more-height rounded-5 d-flex justify-content-center align-items-center w-100">
+                    <a class="text-decoration-none text-reset w-100" href="index.html">
+                      <div class="ds-extra-btn-2 rounded-5 text-center w-100 text-light">RETURN</div>
+                    </a>
+                  </div>
+                                  
+
+                <div class="DS-console col-12 row">
+
+                    <!-- Decoraciones laterales 1 -->
+                    <div class="page-side col-3 non-display-extra">
+
+                        <!-- Parte arriba -->
+                        <div class="col-12 up-down-cross"></div>
+
+                        <!-- Gris del centro con la cruceta -->
+                        <div class="col-12 gray-left d-flex justify-content-center align-items-center non-display-extra z-0">
+                            <!-- Aquí va la cruz (ayuda D:) -->
+                            <div class="dpad position-relative mx-auto mt-4 non-display-extra">
+                                <div class="dpad-up dpad-btn position-absolute"></div>
+                                <div class="dpad-down dpad-btn position-absolute"></div>
+                                <div class="dpad-left dpad-btn position-absolute"></div>
+                                <div class="dpad-right dpad-btn position-absolute"></div>
+                                <div class="dpad-center position-absolute"></div>
+                            </div>
+                            
+                        </div>
+
+                        <!-- Parte abajo -->
+                        <div class="col-12 up-down-cross"></div>
+
+                    </div>
+                    
+                    <!-- Pantalla 2 -->
+                    <section class="screen col-6 rounded-4 row more-width more-width-extra z-3">
+                        <!-- Botones de la izquierda-->
+                        <div class="col-6 h-100 d-flex flex-column align-items-center gap-4">
+
+                            <div class="buttons row carrousel pantalla-abajo rounded-3 mt-4">
+                                <div class="col-6 p-0">
+                                    <button class="sort w-100 button-text rounded-start-3" data-sort-by="name">A->Z</button>
+                                </div>
+                                <div class="col-6 p-0">
+                                    <button class="sort w-100 button-text rounded-end-3" data-sort-by="number">Number</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Imagen de la bolsa, con JS hacer que cambie su imagen a otra en función de cual fintro esté activado -->
+                            <img class="picture pantalla-abajo rounded-3 smaller image-fluid" src="Media/Img/Pt_Items_pocket_M.png" alt="">
+                            
+                            <div class="buttons row carrousel2 pantalla-abajo rounded-3 mt-4">
+                                <div class="col-4 p-0">
+                                    <button class="sort w-100 rounded-start-3" id="healing">Healing</button>
+                                </div>
+                                <div class="col-4 p-0 ">
+                                    <button class="sort w-100" id="pokeballs">Pokeballs</button>
+                                </div>
+                                <div class="col-4 p-0 ">
+                                    <button class="sort w-100 rounded-end-3" id="held">Held</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item-cont card-cont col-6 h-100 overflow-auto mt-3">
+                            <!-- Todas las tarjetitas, se meten cosas con código de JS-->
+                            <div class="row card mt-2 rounded-5">
+                                <p class="ml-2 mt-1">NOMBRE DEL ITEM</p>
+                            </div>
+                            <div class="row card mt-2 rounded-5">
+                                <p class="ml-2 mt-1">NOMBRE DEL ITEM</p>
+                            </div>
+                            <div class="row card mt-2 rounded-5">
+                                <p class="ml-2 mt-1">NOMBRE DEL ITEM</p>
+                            </div>
+                            <div class="row card mt-2 rounded-5">
+                                <p class="ml-2 mt-1">NOMBRE DEL ITEM</p>
+                            </div>
+                            <div class="row card mt-2 rounded-5">
+                                <p class="ml-2 mt-1">NOMBRE DEL ITEM</p>
+                            </div>
+                            <div class="row card mt-2 rounded-5">
+                                <p class="ml-2 mt-1">NOMBRE DEL ITEM</p>
+                            </div>
+                            <div class="row card mt-2 rounded-5">
+                                <p class="ml-2 mt-1">NOMBRE DEL ITEM</p>
+                            </div>
+                            <div class="row card mt-2 rounded-5">
+                                <p class="ml-2 mt-1">NOMBRE DEL ITEM</p>
+                            </div>
+                            <div class="row card mt-2 rounded-5">
+                                <p class="ml-2 mt-1">NOMBRE DEL ITEM</p>
+                            </div>
+                            <div class="row card mt-2 rounded-5">
+                                <p class="ml-2 mt-1">NOMBRE DEL ITEM</p>
+                            </div>
+                            <div class="row card mt-2 rounded-5">
+                                <p class="ml-2 mt-1">NOMBRE DEL ITEM</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Decoraciones laterales 2 -->
+                    <div class="page-side col-3 row non-display-extra less-height">
+                        <div class="col-4 heigth gray-right rounded-end-5 z-1 gray-buttons">
+                            <div class="ds-extra-buttons position-absolute bottom-2 start-50 translate-middle-x d-flex flex-column gap-2">
+                                <a class="text-decoration-none text-reset" href="index.html"><div class="ds-extra-btn"></div></a>
+                                <a class="text-decoration-none text-reset" href="index.html"><div class="ds-extra-btn"></div></a>
+                            </div>
+                        </div>
+                        <!-- DS Buttons -->
+                        <div class="col-12 d-flex justify-content-center align-items-center mt-3 d-none">
+                        <div class="ds-buttons position-relative d-none">
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- Banda abajo-->
+                <div class="page-top-down col-12 non-display"></div>
+            </div> 
+
+            <!-- Línea lateral derecha -->
+            <div class="page-external col align-self-start non-display"></div>
+        </div>
+        
+            
+    </section>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- Script Isotope -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    <!-- Nuestro JS -->
+     <script src="JS/itemList.js"></script>
+     <script src="JS/script.js"></script>
+     <!-- comentario random -->
+</body>
+</html>

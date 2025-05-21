@@ -16,18 +16,12 @@ $(document).ready(function(){
     });
     
     $(".buttons .sort").on("click", function () {
-        // Remove slct class from all sort buttons
-        $(".buttons .sort").removeClass("slct");
-        // Add slct class to clicked button
-        $(this).addClass("slct");
-        
         let sorterVal = $(this).data("sort-by");
-        window.currentSort = sorterVal;
+        window.currentSort = sorterVal; // Update current sort method
         $itemCont.isotope({
             sortBy: sorterVal
         });
     });
 
-    // Set initial selected sort button
-    $(".buttons .sort[data-sort-by='number']").addClass("slct");
+    
 });
